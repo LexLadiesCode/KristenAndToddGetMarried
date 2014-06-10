@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   root 'pages#index'
 
+  get '/wander' => 'pages#wander'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
