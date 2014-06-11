@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   root 'pages#index'
 
-  resources :gifts, only: [:index], defaults: {format: :json}
+  resources :gifts, only: [:index]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

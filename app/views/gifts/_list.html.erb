@@ -1,0 +1,25 @@
+<% if gifts.count.nonzero? %>
+  <ul class="gifts-list">
+    <% gifts.each do |gift| %>
+      <li>
+        <% if gift.image_url.present? %>
+          <%= image_tag gift.image_url, alt: '', class: 'gift-image' %>
+        <% end %>
+        <%= link_to_if gift.url.present?, gift.name, gift.url %>
+        <% if gift.description.present? %>
+          <p class="gift-description">
+            <%= gift.description %>
+          </p>
+        <% end %>
+        <% if gift.location.present? %>
+          <p class="gift-location">
+            <%= gift.location %>
+          </p>
+        <% end %>
+        <p class="gift-percent-funded">
+          <%= gift.percent_funded %>% funded
+        </p>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
