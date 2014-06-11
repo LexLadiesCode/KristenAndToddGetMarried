@@ -7,13 +7,11 @@ class Wanderable
   end
 
   def scrape_gifts
-    gifts = []
     @agent.get(@url) do |page|
       page.at('#hm-list').search('.hm-panel .item').each do |gift_html|
-        gifts << extract_gift(gift_html)
+        extract_gift(gift_html)
       end
     end
-    gifts
   end
 
   private
@@ -46,6 +44,5 @@ class Wanderable
     # TODO: set amount_received_cents on gift
     # gift.amount_received_cents = ???
     gift.save
-    gift
   end
 end
