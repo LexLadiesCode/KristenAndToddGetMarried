@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   root 'pages#index'
 
-  get '/wander' => 'pages#wander'
+  resources :gifts, only: [:index], defaults: {format: :json}
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

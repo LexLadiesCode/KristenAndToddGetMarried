@@ -44,3 +44,6 @@ end
 
 # For scraping Wanderable.com registry site
 gem 'mechanize'
+
+# For parsing strings like "$2,500" from Wanderable
+gem 'monetize'

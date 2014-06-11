@@ -6,24 +6,43 @@ class Wanderable
     @url = url
   end
 
-  def get_data
-    data = []
+  def scrape_gifts
+    gifts = []
     @agent.get(@url) do |page|
-      list = page.at('#hm-list')
-      list.search('.details').each do |gift|
-        name = gift.at('h2').text
-        details = gift.search('p').map {|p| p.text }.reject {|txt| txt.blank? }
-        case details.size
-        when 2
-          description, location = details
-        when 1
-          location = details.first
-        else
-          description = details.join("\n").presence
-        end
-        data << {name: name, description: description, location: location}
+      page.at('#hm-list').search('.hm-panel .item').each do |gift_html|
+        gifts << extract_gift(gift_html)
       end
     end
-    data
+    gifts
+  end
+
+  private
+
+  def extract_gift gift_html
+    image_url = gift_html.at('.col-sm-8 img')['src']
+    name = gift_html.at('.details h2').text
+    details = gift_html.search('.details p').map {|p| p.text }.
+                                        reject {|txt| txt.blank? }
+    case details.size
+    when 2
+      description, location = details
+    when 1
+      location = details.first
+    else
+      description = details.join("\n").presence
+    end
+    cost_str = gift_html.search('.col-sm-4 p').first.text
+    gift = Gift.where(name: name).first_or_initialize
+    gift.description = description
+    gift.location = location
+    gift.image_url = image_url
+    if cost_str.present?
+      dollars = BigDecimal.new(Monetize.parse(cost_str).to_s)
+      gift.cost_cents = (dollars * 100).to_i
+    end
+    # TODO: set amount_received_cents on gift
+    # gift.amount_received_cents = ???
+    gift.save
+    gift
   end
 end
