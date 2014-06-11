@@ -31,11 +31,14 @@ class Wanderable
     else
       description = details.join("\n").presence
     end
-    cost_str = gift_html.search('.col-sm-4 p').first.text
+    cost_str = gift_html.at('.col-sm-4 p').text
+    url = gift_html.at('.col-sm-4 a.add_to_cart')['href']
+    url = 'https://wanderable.com' + url unless url.start_with?('http')
     gift = Gift.where(name: name).first_or_initialize
     gift.description = description
     gift.location = location
     gift.image_url = image_url
+    gift.url = url
     if cost_str.present?
       dollars = BigDecimal.new(Monetize.parse(cost_str).to_s)
       gift.cost_cents = (dollars * 100).to_i

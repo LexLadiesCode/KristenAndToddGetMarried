@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20140611032155) do
     t.text     "description"
     t.string   "location"
     t.string   "image_url"
+    t.string   "url"
     t.integer  "cost_cents"
     t.integer  "amount_received_cents"
     t.datetime "created_at"
