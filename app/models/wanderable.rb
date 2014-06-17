@@ -2,15 +2,18 @@ class Wanderable
   attr_reader :agent, :url
 
   def initialize url
-    @agent = Mechanize.new {|agent| agent.user_agent_alias = 'Mac Safari' }
+    @agent = Mechanize.new do |agent|
+      agent.user_agent_alias = 'Mac Safari'
+      agent.max_history = 0
+      agent.keep_alive = false
+    end
     @url = url
   end
 
   def scrape_gifts
-    @agent.get(@url) do |page|
-      page.at('#hm-list').search('.hm-panel .item').each do |gift_html|
-        extract_gift(gift_html)
-      end
+    page = @agent.get(@url)
+    page.at('#hm-list').search('.hm-panel .item').each do |gift_html|
+      extract_gift(gift_html)
     end
   end
 
