@@ -6,6 +6,8 @@ class Wanderable
       agent.user_agent_alias = 'Mac Safari'
       agent.max_history = 0
       agent.keep_alive = false
+      agent.ssl_version = 'SSLv3'
+      agent.verify_mode = OpenSSL::SSL::VERIFY_NONE
     end
     @url = url
   end
