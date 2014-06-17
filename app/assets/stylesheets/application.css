@@ -14,6 +14,8 @@
  *= require_self
  */
 
+@import "bootstrap";
+
 .clearfix:after {
   visibility: hidden;
   display: block;
