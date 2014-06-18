@@ -1,6 +1,78 @@
-<p>Wedding date: September 21, 2014</p>
 
-<h2>Gifts</h2>
-<div id="gifts-list-wrapper" data-url="<%= gifts_url %>">
-  <%= render 'gifts/list', gifts: @gifts %>
-</div>
+
+<section id="intro">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <nav>
+        <ul>
+          <li>
+            <a href="#">Logo</a>
+          </li>
+          <li>
+            <a href="#story">Our Story</a>
+          </li>
+          <li>
+            <a href="#location">Directions</a>
+          </li>
+          <li>
+            <a href="#rsvp">RSVP</a>
+          </li>
+          <li>
+            <a href="#registry">Registry</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</section>
+
+<section id="story">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Our Story</h2>
+    </div>
+  </div>
+</section>
+
+<section id="location">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Date</h2>
+      <p>September 21, 2014</p>
+    </div>
+    <div class="col-md-6">
+      <h2>Location</h2>
+      <p>Moonlight Fields Farm<br />Nicholasville, KY</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+    </div>
+    <div class="col-md-6">
+      <p><a href="#">Map</a></p>
+      <p><a href="#">Directions</a></p>
+      <p><a href="#">Hotels</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="rsvp">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>RSVP</h2>
+    </div>
+  </div>
+</section>
+
+<section id="registry">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Registry</h2>
+      <div id="gifts-list-wrapper" data-url="<%= gifts_url %>">
+        <%= render 'gifts/list', gifts: @gifts %>
+      </div>
+    </div>
+  </div>
+</section>
