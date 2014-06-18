@@ -1,0 +1,28 @@
+$night-sky-color: rgb(22, 30, 82);
+$night-grass-color: rgb(22, 41, 28);
+$day-sky-color: rgb(97, 203, 255);
+$sunset-sky-color: rgb(227, 214, 87);
+
+section {
+  min-height: 400px;
+}
+
+#intro {
+  background-color: $night-sky-color;
+}
+
+#story {
+  background-color: lighten($night-grass-color, 50%);
+}
+
+#location {
+  background-color: $day-sky-color;
+}
+
+#rsvp {
+  background-color: $night-grass-color;
+}
+
+#registry {
+  background-color: $sunset-sky-color;
+}
