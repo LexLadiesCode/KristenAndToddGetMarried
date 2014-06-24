@@ -1,0 +1,64 @@
+@import url(http://fonts.googleapis.com/css?family=Amatic+SC:700);
+
+nav {
+  top: 300px;
+  position: relative;
+  ul {
+    background: url("navigation_main/sign_post.png") no-repeat;
+    background-position: center;
+    li {
+      list-style-type: none;
+      width: 279px;
+      a{
+        color: #efefef;
+        display: block;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        line-height: 50px;
+        font-size: 25px;
+        font-family: 'Amatic SC', sans-serif;
+      }
+      a:hover, a:visited {
+        text-decoration: none;
+        color: #fff;
+      }
+      a#logo {
+        text-indent: -2000px;
+        background: url("navigation_main/sign_first_logo.png") no-repeat;
+      }
+    }
+    li:nth-child(1) {
+      background: url("navigation_main/sign_first.png") no-repeat;
+      height: 119px;
+    }
+    li:nth-child(2) {
+      background: url("navigation_main/sign_second.png") no-repeat;
+      height: 73px;
+      a {
+        line-height: 73px;
+      }
+    }
+    li:nth-child(3) {
+      background: url("navigation_main/sign_third.png") no-repeat;
+      height: 59px;
+      a {
+        line-height: 59px;
+      }
+    }
+    li:nth-child(4) {
+      background: url("navigation_main/sign_fourth.png") no-repeat;
+      height: 66px;
+      a {
+        line-height: 66px;
+      }
+    }
+    li:nth-child(5) {
+      background: url("navigation_main/sign_fifth.png") no-repeat;
+      height: 73px;
+      a {
+        line-height: 73px;
+      }
+    }
+  }
+}

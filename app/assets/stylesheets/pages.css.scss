@@ -8,7 +8,14 @@ section {
 }
 
 #intro {
+  height: 800px;
   background-color: $night-sky-color;
+  .container {
+    background:
+      url("intro/fire.png") 100px 300px no-repeat,
+      url("intro/tent.png") 700px 200px no-repeat;
+      height: 600px;
+  }
 }
 
 #story {
