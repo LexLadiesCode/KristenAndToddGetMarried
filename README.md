@@ -23,4 +23,4 @@ in this repository for privacy purposes.
 
 ## Screenshot
 
-![](http://github.com/LexLadiesCode/KristenAndToddGetMarried/raw/master/screenshot.png)
+![](https://raw.githubusercontent.com/LexLadiesCode/KristenAndToddGetMarried/master/screenshot.png)
