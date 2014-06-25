@@ -1,6 +1,7 @@
 $night-sky-color: rgb(22, 30, 82);
 $night-grass-color: rgb(22, 41, 28);
 $day-sky-color: rgb(97, 203, 255);
+$day-grass-color: rgb(118, 160, 68);
 $sunset-sky-color: rgb(227, 214, 87);
 
 section {
@@ -113,11 +114,45 @@ section {
 }
 
 #story {
-  background-color: lighten($night-grass-color, 50%);
+  background-color: $day-grass-color;
 }
 
 #location {
+  height: 800px;
   background-color: $day-sky-color;
+  .scenery {
+    position: absolute;
+  }
+  .tree {
+    left: 200px;
+  }
+  .fields {
+    top: 1400px;
+    left: 200px;
+  }
+  .fields-foreground {
+    background-color: $day-grass-color;
+    height: 300px;
+    top: 200px;
+  }
+  .sign-post {
+    background: url("location/sign_post.png") no-repeat;
+    background-position: center;
+    height: 300px;
+    .sign {
+      height: 200px;
+      text-align: center;
+      background: url("location/sign_first_reversed.png") no-repeat;
+      background-position: center;
+      background-size: contain;
+      p:nth-child(1){
+        padding-top: 50px;
+      }
+      a {
+        color: white;
+      }
+    }
+  }
 }
 
 #rsvp {
