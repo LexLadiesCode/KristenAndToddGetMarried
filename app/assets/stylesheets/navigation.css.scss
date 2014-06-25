@@ -3,9 +3,10 @@
 nav {
   top: 100px;
   position: relative;
+  background: url("navigation_main/sign_post.png") no-repeat;
+  background-position: center;
+  height: 600px;
   ul {
-    background: url("navigation_main/sign_post.png") no-repeat;
-    background-position: center;
     li {
       list-style-type: none;
       width: 279px;
