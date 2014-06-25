@@ -15,6 +15,8 @@
  */
 
 @import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Handlee);
+@import url(http://fonts.googleapis.com/css?family=Acme);
 
 .clearfix:after {
   visibility: hidden;
@@ -28,3 +30,13 @@
 * html .clearfix             { zoom: 1; } /* IE6 */
 
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+body, p {
+  font-family: 'Handlee', sans-serif;
+  font-size: 1.5em;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Acme', sans-serif;
+  text-align: center;
+}
