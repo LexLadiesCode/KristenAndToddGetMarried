@@ -9,12 +9,25 @@ section {
 
 #intro {
   height: 800px;
-  background-color: $night-sky-color;
+  background-color: $night-grass-color;
+  .sky {
+    background: $night-sky-color url("intro/mountains.png") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 450px; // height of sky
+    position: relative;
+    //z-index: 9;
+  }
   .container {
+    //z-index: 10;
+    top: -400px; // vertical position of nav, tent, fire, bushes
+    position: relative;
     background:
-      url("intro/fire.png") 100px 300px no-repeat,
-      url("intro/tent.png") 700px 200px no-repeat;
-      height: 600px;
+      url("intro/fire.png") 100px 400px no-repeat,
+      url("intro/tent.png") 775px 350px no-repeat;
+      height: 800px;
   }
 }
 

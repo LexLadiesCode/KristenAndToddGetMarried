@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Amatic+SC:700);
 
 nav {
-  top: 300px;
+  top: 100px;
   position: relative;
   ul {
     background: url("navigation_main/sign_post.png") no-repeat;
@@ -27,6 +27,13 @@ nav {
         text-indent: -2000px;
         background: url("navigation_main/sign_first_logo.png") no-repeat;
       }
+    }
+    li:hover {
+      -webkit-transform: rotate(2deg);
+    	-moz-transform: rotate(2deg);
+    	-ms-transform: rotate(2deg);
+    	-o-transform: rotate(2deg);
+    	transform: rotate(2deg);
     }
     li:nth-child(1) {
       background: url("navigation_main/sign_first.png") no-repeat;
