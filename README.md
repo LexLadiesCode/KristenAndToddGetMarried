@@ -11,7 +11,7 @@ in this repository for privacy purposes.
 
 1. `bundle`
 1. `bundle exec rake db:migrate`
-1. `cp dotenv.sample .env` (Windows users must use command copy dotenv.sample .env)
+1. `cp dotenv.sample .env` (Windows users must use command 'copy dotenv.sample .env')
 1. Edit `.env` and update the Wanderable registry URL.
 1. `rails s`
 
