@@ -20,3 +20,7 @@ in this repository for privacy purposes.
 1. `bundle`
 1. `RAILS_ENV=test bundle exec rake db:migrate`
 1. `RAILS_ENV=test bundle exec rspec`
+
+## Screenshot
+
+![](http://github.com/LexLadiesCode/KristenAndToddGetMarried/raw/master/screenshot.png)
