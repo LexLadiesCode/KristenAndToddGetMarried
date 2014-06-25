@@ -115,25 +115,34 @@ section {
 
 #story {
   background-color: $day-grass-color;
+  min-height: 800px;
 }
 
 #location {
   height: 800px;
   background-color: $day-sky-color;
   .scenery {
-    position: absolute;
+    position: relative;
+  }
+  .directions {
+    z-index: 20;
+    top: -1150px;
   }
   .tree {
     left: 200px;
+    top: -500px;
+    z-index: 15;
   }
   .fields {
-    top: 1400px;
+    top: 300px;
     left: 200px;
+    z-index: 10;
   }
   .fields-foreground {
     background-color: $day-grass-color;
-    height: 300px;
-    top: 200px;
+    height: 400px;
+    top: 190px;
+    z-index: 5;
   }
   .sign-post {
     background: url("location/sign_post.png") no-repeat;
