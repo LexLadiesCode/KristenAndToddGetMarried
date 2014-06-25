@@ -17,17 +17,90 @@ section {
     -o-background-size: cover;
     background-size: cover;
     height: 450px; // height of sky
-    position: relative;
-    //z-index: 9;
+  }
+  .scenery {
+    position: absolute;
+  }
+  .foreground {
+    .bush {
+      top: 600px;
+      left: 1050px;
+      z-index: 40;
+      height: 130px;
+    }
+  }
+  .midground {
+    .tent {
+      top: 400px;
+      left: 900px;
+      z-index: 30;
+    }
+    .fire {
+      top: 400px;
+      left: 220px;
+      z-index: 30;
+    }
+    .bush-front {
+      left: -120px;
+      top: 430px;
+      z-index: 30;
+      height: 105px;
+      -moz-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+      filter: FlipH;
+      -ms-filter: "FlipH";
+    }
+    .bush-back {
+      left: -50px;
+      top: 380px;
+      z-index: 20;
+      height: 110px;
+      -moz-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+      filter: FlipH;
+      -ms-filter: "FlipH";
+      filter: blur(2px);
+      // Browser Specific
+      -webkit-filter: blur(2px);
+      -moz-filter: blur(2px);
+      -o-filter: blur(2px);
+      -ms-filter: blur(2px);
+      filter: brightness(0.5);
+      // Browser Specific
+      -webkit-filter: brightness(0.5);
+      -moz-filter: brightness(0.5);
+      -o-filter: brightness(0.5);
+      -ms-filter: brightness(0.5);
+    }
+  }
+  .background {
+    .bush {
+      top: 390px;
+      left: 1130px;
+      z-index: 10;
+      height: 70px;
+    }
+    filter: blur(2px);
+    // Browser Specific
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: brightness(0.5);
+    // Browser Specific
+    -webkit-filter: brightness(0.5);
+    -moz-filter: brightness(0.5);
+    -o-filter: brightness(0.5);
+    -ms-filter: brightness(0.5);
   }
   .container {
-    //z-index: 10;
-    top: -400px; // vertical position of nav, tent, fire, bushes
-    position: relative;
-    background:
-      url("intro/fire.png") 100px 400px no-repeat,
-      url("intro/tent.png") 775px 350px no-repeat;
-      height: 800px;
+    z-index: 100;
+    top: -300px; // vertical position of nav
+    position: relative; // floats the nav above mountains
   }
 }
 

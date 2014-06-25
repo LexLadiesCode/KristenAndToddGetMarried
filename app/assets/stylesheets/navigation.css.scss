@@ -1,12 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Amatic+SC:700);
 
 nav {
-  top: 100px;
-  position: relative;
-  background: url("navigation_main/sign_post.png") no-repeat;
-  background-position: center;
-  height: 600px;
   ul {
+    background: url("navigation_main/sign_post.png") no-repeat;
+    background-position: center;
+    height: 600px;
     li {
       list-style-type: none;
       width: 279px;

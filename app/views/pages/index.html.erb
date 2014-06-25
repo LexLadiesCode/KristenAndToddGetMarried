@@ -2,6 +2,16 @@
 
 <section id="intro">
   <div class="sky"></div>
+  <div class="foreground"><%= image_tag("intro/bush.png", class: "bush scenery") %></div>
+  <div class="midground">
+    <%= image_tag("intro/fire.png", class: "fire scenery") %>
+    <%= image_tag("intro/bush.png", class: "bush-front scenery") %>
+    <%= image_tag("intro/bush.png", class: "bush-back scenery") %>
+    <%= image_tag("intro/tent.png", class: "tent scenery") %>
+  </div>
+  <div class="background">
+    <%= image_tag("intro/bush.png", class: "bush scenery") %>
+  </div>
   <div class="container">
     <div class="row">
       <div class="col-md-4"></div>
