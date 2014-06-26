@@ -133,6 +133,15 @@ section {
   display: table-cell;
   vertical-align: middle;
   }
+  .text_shrink {
+  background-color: lighten($night-grass-color, 50%);
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  min-height: 10em;
+  display: table-cell;
+  vertical-align: middle;
+  }
 }
 
 #location {
