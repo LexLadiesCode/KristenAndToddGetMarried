@@ -106,6 +106,16 @@ section {
 
 #story {
   background-color: lighten($night-grass-color, 50%);
+  .comsize {
+    height: 300px;
+    width: 715px;  
+  }
+  .text_background {
+  background-color: lighten($night-grass-color, 50%);
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  }
 }
 
 #location {
