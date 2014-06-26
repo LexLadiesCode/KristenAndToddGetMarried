@@ -107,14 +107,20 @@ section {
 #story {
   background-color: lighten($night-grass-color, 50%);
   .comsize {
-    height: 300px;
-    width: 715px;  
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50%;
+    width: 75%;
   }
   .text_background {
   background-color: lighten($night-grass-color, 50%);
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
   text-align: center;
+  min-height: 10em;
+  display: table-cell;
+  vertical-align: middle;
   }
 }
 
