@@ -1,5 +1,6 @@
 class RsvpsController < ApplicationController
   before_action :set_rsvp, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /rsvps
   # GET /rsvps.json
