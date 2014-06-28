@@ -1,5 +1,3 @@
-<h1>Listing rsvps</h1>
-
 <table class="table table-striped">
   <thead>
     <tr>
@@ -7,7 +5,7 @@
       <th>Email</th>
       <th># guests</th>
       <th>Attending?</th>
-      <th colspan="3">Options</th>
+      <th>Options</th>
     </tr>
   </thead>
 
@@ -19,15 +17,14 @@
         <td><%= rsvp.guest_count %></td>
         <td><%= rsvp.attending? ? 'yes' : 'no' %></td>
         <td>
-          <%= link_to 'Show', rsvp %>
-          <%= link_to 'Edit', edit_rsvp_path(rsvp) %>
-          <%= link_to 'Destroy', rsvp, method: :delete, data: {confirm: 'Are you sure?'} %>
+          <ul class="list-inline">
+            <li><%= link_to 'View', rsvp %></li>
+            <li><%= link_to 'Edit', edit_rsvp_path(rsvp) %></li>
+          </ul>
         </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Rsvp', new_rsvp_path %>
+<p><%= link_to 'Make a new RSVP', new_rsvp_path, class: 'btn btn-default' %></p>

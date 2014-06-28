@@ -4,6 +4,27 @@ $day-sky-color: rgb(97, 203, 255);
 $day-grass-color: rgb(118, 160, 68);
 $sunset-sky-color: rgb(227, 214, 87);
 
+body.pages {
+  &, p {
+    font-family: 'Shadows into Light Two', sans-serif;
+    font-size: 1.5em;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Acme', sans-serif;
+    text-align: center;
+    font-size: 40px;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+}
+
 section {
   min-height: 400px;
 }
@@ -120,7 +141,7 @@ section {
   .comsize {
     display: block;
     margin-left: auto;
-    margin-right: auto;   
+    margin-right: auto;
     height: 50%;
     width: 80%;
   }

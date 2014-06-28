@@ -26,28 +26,3 @@
 @import url(http://fonts.googleapis.com/css?family=Handlee);
 @import url(http://fonts.googleapis.com/css?family=Acme);
 @import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two);
-
-
-.clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: " ";
-  clear: both;
-  height: 0;
-}
-
-* html .clearfix             { zoom: 1; } /* IE6 */
-
-*:first-child+html .clearfix { zoom: 1; } /* IE7 */
-
-body, p {
-  font-family: 'Shadows into Light Two', sans-serif;
-  font-size: 1.5em;
-}
-
-h1, h2, h3, h4 {
-  font-family: 'Acme', sans-serif;
-  text-align: center;
-  font-size: 40px;
-}

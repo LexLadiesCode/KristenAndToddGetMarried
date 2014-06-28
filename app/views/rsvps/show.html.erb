@@ -1,29 +1,26 @@
-<p id="notice"><%= notice %></p>
+<dl class="dl-horizontal">
+  <dt>First name:</dt>
+  <dd><%= @rsvp.first_name %></dd>
+  <dt>Last name:</dt>
+  <dd><%= @rsvp.last_name %></dd>
+  <dt>Email address:</dt>
+  <dd><%= mail_to @rsvp.email, @rsvp.email %></dd>
+  <dt>Attending?</dt>
+  <dd><%= @rsvp.attending? ? 'yes' : 'no' %></dd>
+  <dt># guests:</dt>
+  <dd><%= @rsvp.guest_count %></dd>
+  <dt>Song suggestion:</dt>
+  <dd>
+    <% if (suggestion=@rsvp.song_suggestion).present? %>
+      <%= suggestion %>
+    <% else %>
+      &mdash;
+    <% end %>
+  </dd>
+  <dt>Date RSVPed:</dt>
+  <dd><%= @rsvp.created_at %></dd>
+</dl>
 
 <p>
-  <strong>Firstname:</strong>
-  <%= @rsvp.firstname %>
+  <%= link_to 'Edit RSVP', edit_rsvp_path(@rsvp), class: 'btn btn-default' %>
 </p>
-
-<p>
-  <strong>Lastname:</strong>
-  <%= @rsvp.lastname %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @rsvp.email %>
-</p>
-
-<p>
-  <strong>Guestcount:</strong>
-  <%= @rsvp.guestcount %>
-</p>
-
-<p>
-  <strong>Attending:</strong>
-  <%= @rsvp.attending %>
-</p>
-
-<%= link_to 'Edit', edit_rsvp_path(@rsvp) %> |
-<%= link_to 'Back', rsvps_path %>

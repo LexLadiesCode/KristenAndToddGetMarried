@@ -159,7 +159,7 @@ $(document).ready ->
       $(".fixed-header").hide()
     return
 
-  $("ul.nav a").on "click", (event) ->
+  $("ul.nav#sign-nav a").on "click", (event) ->
     event.preventDefault()
     targetID = $(this).attr("href")
     targetST = $(targetID).offset().top - 48
