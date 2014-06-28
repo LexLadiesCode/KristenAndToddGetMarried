@@ -1,5 +1,3 @@
-<h1>Hi there!</h1>
-
 <p>Someone has RSVPed for your wedding. :)</p>
 
 <p>
@@ -13,10 +11,11 @@
 </p>
 
 <p>
-  <strong><%= @rsvp.attending? ? 'Yes' : 'No' %></strong>,
-  they will
-  <%= @rsvp.attending? ? 'be' : 'not be' %>
-  attending.
+  <% if @rsvp.attending? %>
+    <strong>Yes</strong>, they will be attending. :)
+  <% else %>
+    <strong>No</strong>, they will <strong>not</strong> be attending. :(
+  <% end %>
 </p>
 
 <p>
@@ -26,5 +25,9 @@
 
 <p>
   <strong>Song suggestion:</strong>
-  <%= @rsvp.song_suggestion %>
+  <% if (song_suggestion=@rsvp.song_suggestion).present? %>
+    <%= @rsvp.song_suggestion %>
+  <% else %>
+    <em>none</em>
+  <% end %>
 </p>

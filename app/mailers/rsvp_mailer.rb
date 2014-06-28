@@ -3,7 +3,7 @@ class RsvpMailer < ActionMailer::Base
 
   def repondez rsvp_id
     @rsvp = Rsvp.find(rsvp_id)
-    subject = "New RSVP from #{@rsvp.name}!"
+    subject = "New RSVP from #{@rsvp.full_name}!"
     from = name_and_email(@rsvp.full_name, @rsvp.email)
     mail(from: from, to: 'cheshire137@gmail.com', subject: subject) do |format|
       format.text
