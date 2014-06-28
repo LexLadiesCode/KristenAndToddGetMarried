@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140611032155) do
+ActiveRecord::Schema.define(version: 20140628203325) do
 
   create_table "gifts", force: true do |t|
     t.string   "name"
@@ -21,6 +21,16 @@ ActiveRecord::Schema.define(version: 20140611032155) do
     t.string   "url"
     t.integer  "cost_cents"
     t.integer  "amount_received_cents"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "rsvps", force: true do |t|
+    t.string   "firstname"
+    t.string   "lastname"
+    t.string   "email"
+    t.integer  "guestcount"
+    t.boolean  "attending"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
