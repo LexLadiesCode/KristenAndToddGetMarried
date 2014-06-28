@@ -115,32 +115,18 @@ section {
 
 #story {
   background-color: $day-grass-color;
-  min-height: 800px;
+  min-height: 600px;
   background-color: lighten($night-grass-color, 50%);
   .comsize {
     display: block;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto;   
     height: 50%;
-    width: 75%;
+    width: 80%;
   }
   .text_background {
-  background-color: lighten($night-grass-color, 50%);
-  font-size: 26px;
-  font-weight: bold;
-  text-align: center;
-  min-height: 10em;
-  display: table-cell;
-  vertical-align: middle;
-  }
-  .text_shrink {
-  background-color: lighten($night-grass-color, 50%);
-  font-size: 22px;
-  font-weight: bold;
-  text-align: center;
-  min-height: 10em;
-  display: table-cell;
-  vertical-align: middle;
+    background-color: lighten($night-grass-color, 50%);
+    font-size: 20px;
   }
 }
 
