@@ -1,11 +1,12 @@
 class CreateRsvps < ActiveRecord::Migration
   def change
     create_table :rsvps do |t|
-      t.string :firstname
-      t.string :lastname
+      t.string :first_name
+      t.string :last_name
       t.string :email
-      t.integer :guestcount
+      t.integer :guest_count
       t.boolean :attending
+      t.string :song_suggestion
 
       t.timestamps
     end
