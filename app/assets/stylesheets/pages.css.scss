@@ -3,25 +3,23 @@ $night-grass-color: rgb(22, 41, 28);
 $day-sky-color: rgb(97, 203, 255);
 $day-grass-color: rgb(118, 160, 68);
 $sunset-sky-color: rgb(227, 214, 87);
+$page-text-font: 'Shadows into Light Two', sans-serif;
+$page-header-font: 'Acme', sans-serif;
 
 body.pages {
-  &, p {
-    font-family: 'Shadows into Light Two', sans-serif;
-    font-size: 1.5em;
+  color: #fff;
+  font-family: $page-text-font;
+  font-size: 1.5em;
+  overflow-x: hidden;
+
+  .btn {
+    font-family: $page-text-font;
   }
 
   h1, h2, h3, h4 {
-    font-family: 'Acme', sans-serif;
+    font-family: $page-header-font;
     text-align: center;
     font-size: 40px;
-  }
-
-  p {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.5;
-    margin-bottom: 40px;
-    text-align: center;
   }
 }
 

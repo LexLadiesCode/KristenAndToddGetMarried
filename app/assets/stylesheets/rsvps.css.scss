@@ -1,3 +1,5 @@
-// Place all the styles related to the Rsvps controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
+
+input, select, textarea {
+  font-family: $font-family-sans-serif;
+}

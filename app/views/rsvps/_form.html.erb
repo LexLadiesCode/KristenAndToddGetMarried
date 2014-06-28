@@ -1,46 +1,51 @@
 <%= form_for(@rsvp, html: {class: "form-horizontal", role: "form"}) do |f| %>
   <% if @rsvp.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@rsvp.errors.count, "error") %> prohibited this rsvp from being saved:</h2>
-
-      <ul>
-      <% @rsvp.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+    <div id="error_explanation" class="alert alert-danger">
+      <ul class="list-unstyled">
+        <% @rsvp.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
   <div class="form-group">
-    <%= f.label :first_name, class: "control-label  col-sm-3" %>
-    <div class="col-sm-6">
-      <%= f.text_field :first_name, class: "form-control", placeholder: "Enter your first name"%>
+    <%= f.label :first_name, class: "control-label col-sm-4" %>
+    <div class="col-sm-8">
+      <%= f.text_field :first_name, class: "form-control", placeholder: "Your first name" %>
     </div>
-  </div><br>
-  <div class="form-group">
-    <%= f.label :last_name, class: "control-label  col-sm-3" %>
-    <div class="col-sm-6">
-      <%= f.text_field :last_name, class: "form-control", placeholder: "Enter your last name" %>
-    </div>
-  </div><br>
-  <div class="form-group">
-    <%= f.label :email, class: "control-label  col-sm-3" %>
-    <div class="col-sm-6">
-      <%= f.text_field :email, class: "form-control"  %>
-    </div>
-  </div><br>
-  <div class="form-group">
-    <%= f.label :guest_count, class: "control-label  col-sm-3"%>
-    <div class="col-sm-6">
-      <%= f.number_field :guest_count, class: "form-control" %>
-    </div>
-  </div><br>
-  <div class="form-group">
-    <label class="control-label col-sm-offset-3">
-      <%= f.check_box :attending %> Yes, I'll be attending
-    </label>
   </div>
-
   <div class="form-group">
-    <%= f.submit "Send RSVP", class: "btn btn-primary col-sm-3 col-sm-offset-3" %>
+    <%= f.label :last_name, class: "control-label col-sm-4" %>
+    <div class="col-sm-8">
+      <%= f.text_field :last_name, class: "form-control", placeholder: "Your last name" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-4 col-sm-8">
+      <label class="checkbox">
+        <%= f.check_box :attending %>
+        Yes, I'll be attending
+      </label>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :email, 'Email address:', class: "control-label col-sm-4" %>
+    <div class="col-sm-8">
+      <%= f.text_field :email, class: "form-control", placeholder: '@' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :guest_count, 'How many people will be attending?', class: "control-label col-sm-4" %>
+    <div class="col-sm-8">
+      <%= f.number_field :guest_count, class: "form-control", step: 1, min: 0 %>
+      <p class="help-block">
+        Include yourself
+      </p>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-8 col-sm-offset-4">
+      <%= f.submit "Send RSVP", class: "btn btn-lg btn-primary" %>
+    </div>
   </div>
 <% end %>

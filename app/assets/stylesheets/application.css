@@ -18,11 +18,9 @@
  *= require registrations
  *= require rsvps
  *= require slick
- *= require style
  *= require_self
  */
 
-@import "bootstrap";
 @import url(http://fonts.googleapis.com/css?family=Handlee);
 @import url(http://fonts.googleapis.com/css?family=Acme);
 @import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two);
