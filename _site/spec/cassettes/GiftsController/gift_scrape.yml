@@ -1,0 +1,285 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://wanderable.com/hm/MyFancyRegistry
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept-encoding:
+      - gzip,deflate,identity
+      accept:
+      - "*/*"
+      user-agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/534.51.22 (KHTML,
+        like Gecko) Version/5.1.1 Safari/534.51.22
+      accept-charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      accept-language:
+      - en-us,en;q=0.5
+      host:
+      - wanderable.com
+      connection:
+      - keep-alive
+      keep-alive:
+      - 300
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      cache-control:
+      - max-age=0, private, must-revalidate
+      content-type:
+      - text/html; charset=utf-8
+      date:
+      - Wed, 11 Jun 2014 04:14:10 GMT
+      etag:
+      - '"ffa63565fc8720a7fa77216ca5a90ae3"'
+      server:
+      - thin 1.6.2 codename Doc Brown
+      set-cookie:
+      - _gomeep_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJWQ5ZTI3MjlmMzg1M2Q5Y2ZmOGVhMDUxYzYwMmVmNTQ2BjsAVEkiCjExNDMzBjsARnsASSIQX2NzcmZfdG9rZW4GOwBGSSIxZ0FRVjUwY1dBSGZGQ1N5cnAvWmk3WjcyQU5kVnZIRDM4bXpTdDdCTHZBWT0GOwBG--31ce853f98bf40e37edca5e9931e6490616095eb;
+        domain=.wanderable.com; path=/; HttpOnly; secure
+      strict-transport-security:
+      - max-age=31536000
+      x-rack-cache:
+      - miss
+      x-runtime:
+      - '0.479129'
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      content-length:
+      - '19709'
+      connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html>\n<html>\n  <head>\n<script type=\"text/javascript\">window.NREUM||(NREUM={});NREUM.info={\"beacon\":\"beacon-5.newrelic.com\",\"errorBeacon\":\"bam.nr-data.net\",\"licenseKey\":\"1ae4865255\",\"applicationID\":\"2332324\",\"transactionName\":\"cVkLQ0dbX1tWSk5fXVxTHFpaW11oQV0GXkFGRAxSRhtAX1xP\",\"queueTime\":9,\"applicationTime\":473,\"ttGuid\":\"\",\"agentToken\":null,\"agent\":\"js-agent.newrelic.com/nr-411.min.js\"}</script>\n<script
+        type=\"text/javascript\">window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function
+        r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var
+        o=t[e][1][n];return r(o?o:n)},o,o.exports)}return n[e].exports}if(\"function\"==typeof
+        __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return
+        r}({D5DuLP:[function(t,n){function e(t,n){var e=r[t];return e?e.apply(this,n):(o[t]||(o[t]=[]),void
+        o[t].push(n))}var r={},o={};n.exports=e,e.queues=o,e.handlers=r},{}],handle:[function(t,n){n.exports=t(\"D5DuLP\")},{}],G9z0Bl:[function(t,n){function
+        e(){var t=l.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&p&&p.body){l.proto=\"https\"===f.split(\":\")[0]||t.sslForHttp?\"https://\":\"http://\",i(\"mark\",[\"onload\",a()]);var
+        n=p.createElement(\"script\");n.src=l.proto+t.agent,p.body.appendChild(n)}}function
+        r(){\"complete\"===p.readyState&&o()}function o(){i(\"mark\",[\"domContent\",a()])}function
+        a(){return(new Date).getTime()}var i=t(\"handle\"),u=window,p=u.document,s=\"addEventListener\",c=\"attachEvent\",f=(\"\"+location).split(\"?\")[0],l=n.exports={offset:a(),origin:f,features:[]};p[s]?(p[s](\"DOMContentLoaded\",o,!1),u[s](\"load\",e,!1)):(p[c](\"onreadystatechange\",r),u[c](\"onload\",e)),i(\"mark\",[\"firstbyte\",a()])},{handle:\"D5DuLP\"}],loader:[function(t,n){n.exports=t(\"G9z0Bl\")},{}]},{},[\"G9z0Bl\"]);</script>\n
+        \   <!-- Typekit font scripts -->\n    <script type=\"text/javascript\" src=\"//use.typekit.net/dzi4qxa.js\"></script>\n
+        \   <script type=\"text/javascript\">try{Typekit.load();}catch(e){}</script>\n\n
+        \   <meta charset=\"UTF-8\">\n    <meta name=\"description\" content=\"Wanderable
+        is taking the first step toward a new kind of honeymoon registry. Will you
+        join us?\">\n\n      <meta name=\"viewport\" content=\"width=1150\">\n\n\n
+        \   <title>\n  Kristen and Todd's Honeymoon Registry |\n | Wanderable</title>\n\n
+        \   <!--[if lt IE 9]>\n    <script src=\"/assets/ie-manifest-d6771eb6268d0dc16a2763ca6ef4009c.js\"
+        type=\"text/javascript\"></script>\n    <script src=\"https:////html5shiv.googlecode.com/svn/trunk/html5.js\"></script>\n
+        \   <![endif]-->\n\n    <link href=\"/assets/registry-layouts-manifest-431e3e3e644ce6817d6070d36ff1b336.css\"
+        media=\"screen\" rel=\"stylesheet\" type=\"text/css\" />\n\n      <link href=\"/assets/registry-layouts-manifest-431e3e3e644ce6817d6070d36ff1b336.css\"
+        media=\"screen\" rel=\"stylesheet\" type=\"text/css\" />\n\n    <meta content=\"authenticity_token\"
+        name=\"csrf-param\" />\n<meta content=\"gAQV50cWAHfFCSyrp/Zi7Z72ANdVvHD38mzSt7BLvAY=\"
+        name=\"csrf-token\" />\n    <link rel=\"apple-touch-icon\" sizes=\"57x57\"
+        href=\"/apple-touch-icon-57x57.png\">\n<link rel=\"apple-touch-icon\" sizes=\"114x114\"
+        href=\"/apple-touch-icon-114x114.png\">\n<link rel=\"apple-touch-icon\" sizes=\"72x72\"
+        href=\"/apple-touch-icon-72x72.png\">\n<link rel=\"apple-touch-icon\" sizes=\"144x144\"
+        href=\"/apple-touch-icon-144x144.png\">\n<link rel=\"apple-touch-icon\" sizes=\"60x60\"
+        href=\"/apple-touch-icon-60x60.png\">\n<link rel=\"apple-touch-icon\" sizes=\"120x120\"
+        href=\"/apple-touch-icon-120x120.png\">\n<link rel=\"apple-touch-icon\" sizes=\"76x76\"
+        href=\"/apple-touch-icon-76x76.png\">\n<link rel=\"apple-touch-icon\" sizes=\"152x152\"
+        href=\"/apple-touch-icon-152x152.png\">\n<link rel=\"icon\" type=\"image/png\"
+        href=\"/favicon-196x196.png\" sizes=\"196x196\">\n<link rel=\"icon\" type=\"image/png\"
+        href=\"/favicon-160x160.png\" sizes=\"160x160\">\n<link rel=\"icon\" type=\"image/png\"
+        href=\"/favicon-96x96.png\" sizes=\"96x96\">\n<link rel=\"icon\" type=\"image/png\"
+        href=\"/favicon-16x16.png\" sizes=\"16x16\">\n<link rel=\"icon\" type=\"image/png\"
+        href=\"/favicon-32x32.png\" sizes=\"32x32\">\n<meta name=\"msapplication-TileColor\"
+        content=\"#2b5797\">\n<meta name=\"msapplication-TileImage\" content=\"/mstile-144x144.png\">\n\n
+        \           <script type='text/javascript'>\n            var mpq = [];\n            mpq.push([\"init\",
+        \"835e824548ac16cf3032433b9388ea1a\"]);\n            (function() {\n            var
+        mp = document.createElement(\"script\"); mp.type = \"text/javascript\"; mp.async
+        = true;\n            mp.src = (document.location.protocol == 'https:' ? 'https:'
+        : 'http:') + \"//api.mixpanel.com/site_media/js/api/mixpanel.js\";\n            var
+        s = document.getElementsByTagName(\"script\")[0]; s.parentNode.insertBefore(mp,
+        s);\n            })();\n          </script>\n</head>\n  <body id=\"wanderable\"
+        class=\"hm-show-registry page-hm-registry-layout page-hm-registry-layout-js\">\n
+        \   <header id=\"site-header\" class=\"site-header\">\n\n  <nav class=\"navbar
+        navbar-default  navbar-custom top-nav-collapse\" id=\"site-navbar\" role=\"navigation\"
+        data-navbar-state=\"transparent\">\n    <div class=\"container-fluid\">\n
+        \     <div class=\"navbar-header navbar-left\">\n        <button type=\"button\"
+        class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\">\n
+        \         <span class=\"sr-only\">Toggle navigation</span>\n          <span
+        class=\"icon-bar\"></span>\n          <span class=\"icon-bar\"></span>\n          <span
+        class=\"icon-bar\"></span>\n        </button>\n        <a href=\"/\" class=\"wanderable-logo-wrapper
+        wanderable-logo-site-header\">\n\n\n    <div class=\"wanderable-logo-img-container\">\n
+        \     <img alt=\"Wanderable-logo-white-small_az5fkv\" class=\"wanderable-logo-img\"
+        src=\"https://res.cloudinary.com/wanderable/image/upload/v1396405628/wanderable-logo-white-small_az5fkv.png\"
+        />\n    </div>\n\n    <span class=\"wanderable-company-name\">Wanderable</span>\n\n\n</a>\n
+        \     </div>\n\n      <!-- Collect the nav links, forms, and other content
+        for toggling -->\n      <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\n
+        \       <ul class=\"nav navbar-nav navbar-right\">\n\n\n            <li>\n
+        \             <a href=\"/users/sign_in\" class=\" nav-link sign-in\">Log In</a>\n
+        \           </li>\n            <li>\n              <a href=\"/pages/new_signup\"
+        class=\" nav-link\">Create Your Registry</a>\n            </li>\n            <li>\n
+        \             <a href=\"/find-a-registry\" class=\" nav-link\">Find a Registry</a>\n
+        \           </li>\n            <li><a href=\"/honeymoon-registry-and-wedding-registry\"
+        class=\" nav-link\">How It Works</a></li>\n\n\n        </ul>\n      </div>\n
+        \   </div>\n  </nav>\n\n</header>\n\n\n    \n\n    <div class=\" container-fluid
+        \">\n      \n\n      <div class=\"hm-registry-layout-content\">\n        \n<div
+        id=\"hm-list\" class=\"hm-page\">\n  <div class=\"container\">\n    <div class=\"row\">\n
+        \     <div class=\"col-xs-8\">\n        <div class=\"box drop-shadow hm-info
+        hm-panel\">\n          <h2>Kristen and Todd</h2>\n          <p><em>Destination:
+        Awesome Travel Destination</em></p>\n          <p></p>\n        </div>\n        <div
+        class=\"box drop-shadow item-container hm-panel\">\n          <div class=\"item
+        even\">\n  <div class=\"col-xs-12 col-sm-8\">\n      <img alt=\"Mwtpenjazleefyoi79c6\"
+        src=\"https://res.cloudinary.com/wanderable/image/upload/c_limit,w_120/v1393898767/mwtpenjazleefyoi79c6.jpg\"
+        title=\"Image uploaded by user\" />\n    <div class=\"details\">\n      <h2>5
+        night stay</h2>\n      <p><p>5 night stay in an ocean view room
+        with a daily breakfast buffet.</p></p>\n      <p><em>Some Cool Place</em></p>\n    </div>\n  </div>\n  <div
+        class=\"col-xs-12 col-sm-4\">\n      <p>\n    $3,000\n  \n  </p>\n      <a
+        href=\"/cart/MyFancyRegistry/add?item_id=86296&amp;num=1&amp;purchase_mode=true&amp;registry_id=11433\"
+        class=\"btn btn-primary btn-hm add_to_cart\" id=\"add_to_cart_button_86296\"><i
+        class='icon-gift'></i> &nbsp;Give gift</a>\n        <div class=\"small\"><br>You
+        can gift any amount you wish up to $3,000.</div>\n\n\n\n  </div>\n</div>\n\n\n<div
+        class=\"item odd hm-panel-dark\">\n  <div class=\"col-xs-12 col-sm-8\">\n
+        \     <img alt=\"R4c1ojraxdneayyfgsf1\" src=\"https://res.cloudinary.com/wanderable/image/upload/c_limit,w_120/v1393900650/r4c1ojraxdneayyfgsf1.jpg\"
+        title=\"Image uploaded by user\" />\n    <div class=\"details\">\n      <h2>Airfare</h2>\n
+        \     <p><p></p></p>\n      <p><em></em></p>\n    </div>\n  </div>\n  <div
+        class=\"col-xs-12 col-sm-4\">\n      <p>\n    $2,500\n  \n  </p>\n      <a
+        href=\"/cart/MyFancyRegistry/add?item_id=86305&amp;num=1&amp;purchase_mode=true&amp;registry_id=11433\"
+        class=\"btn btn-primary btn-hm add_to_cart\" id=\"add_to_cart_button_86305\"><i
+        class='icon-gift'></i> &nbsp;Give gift</a>\n        <div class=\"small\"><br>You
+        can gift any amount you wish up to $2,500.</div>\n\n\n\n  </div>\n</div>\n\n\n<div
+        class=\"item even\">\n  <div class=\"col-xs-12 col-sm-8\">\n      <a href=\"http://www.flickr.com/photos/44124425616@N01/2442984123\"
+        target=\"_blank\"><img alt=\"Enosrsqjioqxhayt6xwd\" src=\"https://res.cloudinary.com/wanderable/image/upload/c_limit,w_120/v1393898252/enosrsqjioqxhayt6xwd.jpg\"
+        title=\"http://www.flickr.com/photos/44124425616@N01/2442984123\" /></a>\n
+        \   <div class=\"details\">\n      <h2>Scuba diving</h2>\n      <p><p></p></p>\n
+        \     <p><em>Nifty Location</em></p>\n
+        \   </div>\n  </div>\n  <div class=\"col-xs-12 col-sm-4\">\n      <p>\n    $180\n
+        \ \n  </p>\n      <a href=\"/cart/MyFancyRegistry/add?item_id=86291&amp;num=1&amp;purchase_mode=true&amp;registry_id=11433\"
+        class=\"btn btn-primary btn-hm add_to_cart\" id=\"add_to_cart_button_86291\"><i
+        class='icon-gift'></i> &nbsp;Give gift</a>\n        <div class=\"small\"><br>You
+        can gift any amount you wish up to $180.</div>\n\n\n\n  </div>\n</div>\n      <div class=\"col-xs-4\">\n        <div
+        class=\"hm-side box drop-shadow hm-panel\">\n          \n          <h2>September
+        21, 2014</h2>\n          <p></p>\n        </div>\n      </div>\n    </div>\n
+        \ </div>\n</div>\n\n        \n        \n\n\n\n\n\n\n\n  \n\n\n\n  \n\n\n\n
+        \ <link rel=\"stylesheet\" type=\"text/css\" href=\"https://fonts.googleapis.com/css?family=Alegreya+SC|Alegreya+SC\">\n\n\n\n\n
+        \     </div>\n    </div>\n\n    <footer id=\"site-footer\" class=\"container-fluid
+        site-footer text-inverse\">\n  <div class=\"row\">\n    <div class=\"col-sm-6
+        col-xs-12\">\n      <a href=\"/\" class=\"wanderable-logo-wrapper wanderable-logo-site-footer\">\n\n
+        \ <div class=\"wanderable-logo-inverse\">\n\n    <div class=\"wanderable-logo-img-container\">\n
+        \     <img alt=\"Wanderable-logo-white-small_az5fkv\" class=\"wanderable-logo-img\"
+        src=\"https://res.cloudinary.com/wanderable/image/upload/v1396405628/wanderable-logo-white-small_az5fkv.png\"
+        />\n    </div>\n\n    <span class=\"wanderable-company-name\">Wanderable</span>\n\n
+        \ </div>\n\n</a>\n\n      <p class=\"footer-wanderable-desc\">\n        Wanderable
+        is taking the first step toward a new kind of honeymoon registry.\n        <br>\n
+        \       Will you join us?\n      </p>\n\n      <div class=\"footer-contact-info\">\n
+        \       <dl class=\"list-unstyled footer-list\">\n          <dt><h4>Contact
+        Information</h4></dt>\n          <dd>hello@wanderable.com</dd>\n          <dd>Monday
+        - Friday, 10AM - 3PM PST</dd>\n          <dd>Call Us: (888) 722-6888</dd>\n
+        \       </dl>\n      </div>\n\n      <div class=\"footer-social-btns\">\n
+        \       <a class=\"social-btn social-btn-twitter\" href=\"http://twitter.com/wanderable\"
+        title=\"@wanderable on Twitter\"></a>\n        <a class=\"social-btn social-btn-facebook\"
+        href=\"http://www.facebook.com/wanderable\" title=\"Wanderable on Facebook\"></a>\n
+        \       <a class=\"social-btn social-btn-email\" href=\"mailto:hello@wanderable.com\"
+        title=\"Get in touch via Email\"></a>\n      </div>\n    </div>\n\n    <div
+        class=\"col-sm-3 col-xs-12\">\n      <div class=\"footer-nav-col footer-for-couples\">\n
+        \       <button class=\"btn btn-link footer-collapse-btn\" type=\"button\"
+        data-toggle=\"collapse\" data-target=\"#nav-for-couples\">\n          <h4>For
+        Couples</h4>\n        </button>\n        <nav class=\"footer-nav-collapse
+        footer-nav collapse\" id=\"nav-for-couples\">\n          <ul class=\"list-unstyled
+        footer-list\">\n            <li>\n              <a href=\"/honeymoon-registry-and-wedding-registry\">How
+        It Works</a>\n            </li><li>\n              <a href=\"/registry-pricing\">Pricing
+        &amp; Fees</a>\n            </li><li>\n              <a href=\"/registry-faq\">Read
+        Our FAQs</a>\n            </li><li>\n              <a href=\"/honeymoon-registry-reviews\">Example
+        Registries</a>\n            </li><li>\n              <a href=\"/honeymoon-destinations\">Browse
+        Destinations</a>\n            </li>\n          </ul>\n        </nav>\n      </div>\n\n
+        \     <div class=\"footer-nav-col footer-for-guests\">\n        <button class=\"btn
+        btn-link footer-collapse-btn\" type=\"button\" data-toggle=\"collapse\" data-target=\"#nav-for-guests\">\n
+        \         <h4>For Guests</h4>\n        </button>\n        <nav class=\"footer-nav-collapse
+        footer-nav collapse\" id=\"nav-for-guests\">\n          <ul class=\"list-unstyled
+        footer-list\">\n            <li>\n              <a href=\"/honeymoon-registry-and-wedding-registry#how-it-works-guests\">How
+        It Works</a>\n            </li><li>\n              <!-- TODO: check all links
+        -->\n              <a href=\"/find-a-registry\">Find a Registry</a>\n            </li>\n
+        \         </ul>\n        </nav>\n      </div>\n    </div>\n\n    <div class=\"col-sm-3
+        col-xs-12\">\n      <div class=\"footer-nav-col footer-for-businesses\">\n
+        \       <button class=\"btn btn-link footer-collapse-btn\" type=\"button\"
+        data-toggle=\"collapse\" data-target=\"#nav-for-businesses\">\n          <h4>For
+        Businesses</h4>\n        </button>\n        <nav class=\"footer-nav-collapse
+        footer-nav collapse\" id=\"nav-for-businesses\">\n          <ul class=\"list-unstyled
+        footer-list\">\n            <li>\n              <a href=\"/merchants\">Join
+        the Merchant Network</a>\n            </li><li>\n              <!-- TODO -->\n
+        \             <a href=\"/private-label-registry-for-business\">Explore Our
+        White-Label Options</a>\n            </li>\n          </ul>\n        </nav>\n
+        \     </div>\n\n      <div class=\"footer-nav-col footer-for-other\">\n        <button
+        class=\"btn btn-link footer-collapse-btn\" type=\"button\" data-toggle=\"collapse\"
+        data-target=\"#nav-for-other\">\n          <h4>About Wanderable</h4>\n        </button>\n
+        \       <nav class=\"footer-nav-collapse footer-nav collapse\" id=\"nav-for-other\">\n
+        \         <ul class=\"list-unstyled footer-list\">\n            <li>\n              <a
+        href=\"/jobs\">Jobs</a>\n            </li><li>\n              <a href=\"http://blog.wanderable.com\">Blog</a>\n
+        \           </li><li>\n              <a href=\"/honeymoon-registry-press\">Press</a>\n
+        \           </li><li>\n              <a href=\"/about\">About</a>\n            </li>\n
+        \         </ul>\n        </nav>\n      </div>\n    </div>\n\n    <div class=\"footer-disclaimer
+        col-sm-12 col-xs-12\">\n      Copyright &copy; 2014 Wanderable. All Rights
+        Reserved.\n      <nav class=\"footer-nav footer-nav-inline\">\n        <ul
+        class=\"list-unstyled footer-list-inline\">\n          <li>\n            <a
+        href=\"/terms-of-service\" class=\"footer-link-inline\">Terms of Service</a>\n
+        \         </li><li>\n            <a href=\"/privacy-policy\" class=\"footer-link-inline\">Privacy
+        Policy</a>\n          </li>\n        </ul>\n      </nav>\n    </div>\n  </div>\n</footer>\n\n\n
+        \   <!-- JS goes here -->\n    <script src=\"/assets/internal-manifest-efc3ca959eefebeb5efa125c2b9032ff.js\"
+        type=\"text/javascript\"></script>\n      <script src=\"https://www.google.com/jsapi?key=ABQIAAAAk-uGDkbSPOxZ5Yw5eQrlfhTDYoDANsYMQ1UXkp2U2t51F-yDDRSlcnqAMsSreOxo-B8g41AFtJcLoQ\"></script>\n
+        \ \n<script type=\"text/javascript\">\n  var _gaq = _gaq || [];\n  _gaq.push(['_setAccount',
+        'UA-25480031-1']);\n  _gaq.push(['_trackPageview']);\n  \n  (function() {\n
+        \   var ga = document.createElement('script'); ga.type = 'text/javascript';
+        ga.async = true;\n    ga.src = ('https:' == document.location.protocol ? 'https://'
+        : 'http://') + 'stats.g.doubleclick.net/dc.js';\n    var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);\n  })();\n\n  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n
+        \ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n
+        \ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n
+        \ })(window,document,'script','//www.google-analytics.com/analytics.js','ga');\n\n
+        \ ga('create', 'UA-25480031-2' );\n  ga('send', 'pageview');\n\n  \n  \n\n
+        \ \n  \n  \n  \n\n</script>\n\n\n\n    <script type=\"text/javascript\">\n
+        \ adroll_adv_id = \"42STDVHFHBGOXPDCPFEARE\";\n  adroll_pix_id = \"632SAYBAEFCEDELCXOAL4G\";\n
+        \ (function () {\n  var oldonload = window.onload;\n  window.onload = function(){\n
+        \    __adroll_loaded=true;\n     var scr = document.createElement(\"script\");\n
+        \    var host = ((\"https:\" == document.location.protocol) ? \"https://s.adroll.com\"
+        : \"http://a.adroll.com\");\n     scr.setAttribute('async', 'true');\n     scr.type
+        = \"text/javascript\";\n     scr.src = host + \"/j/roundtrip.js\";\n     ((document.getElementsByTagName('head')
+        || [null])[0] ||\n      document.getElementsByTagName('script')[0].parentNode).appendChild(scr);\n
+        \    if(oldonload){oldonload()}};\n  }());\n  </script>\n\n  <script type=\"text/javascript\">\n
+        \ /* <![CDATA[ */\n  var google_conversion_id = 1007220446;\n  var google_custom_params
+        = window.google_tag_params;\n  var google_remarketing_only = true;\n  /* ]]>
+        */\n  </script>\n  <script type=\"text/javascript\" src=\"//www.googleadservices.com/pagead/conversion.js\">\n
+        \ </script>\n  <noscript>\n  <div style=\"display:inline;\">\n  <img height=\"1\"
+        width=\"1\" style=\"border-style:none;\" alt=\"\" src=\"//googleads.g.doubleclick.net/pagead/viewthroughconversion/1007220446/?value=0&amp;guid=ON&amp;script=0\"/>\n
+        \ </div>\n  </noscript>\n\n  <script type=\"text/javascript\">\nsetTimeout(function(){var
+        a=document.createElement(\"script\");\nvar b=document.getElementsByTagName(\"script\")[0];\na.src=document.location.protocol+\"//dnn506yrbagrg.cloudfront.net/pages/scripts/0023/0678.js?\"+Math.floor(new
+        Date().getTime()/3600000);\na.async=true;a.type=\"text/javascript\";b.parentNode.insertBefore(a,b)},
+        1);\n</script>\n\n\n\n    <script>\n    $('.page-hm-registry-layout-js').ready(function()
+        {\n      var siteHeader = $('#site-header'),\n          siteFooter = $('#site-footer');\n\n
+        \     siteHeader.insertBefore(siteFooter);\n    });\n    </script>\n    \n
+        \ <script src=\"/assets/layout-manifest-1b3d65ceaebf67f5d191a5595a0a65c4.js\"
+        type=\"text/javascript\"></script>\n<script type=\"text/javascript\">\n  $(document).ready(function(){\n
+        \   var siteHeader = $('#site-header');\n    siteHeader.find('.navbar-fixed-top').removeClass('navbar-fixed-top');\n
+        \   siteHeader.insertBefore('#site-footer');\n    $('.main-application-container,
+        .channel-container').css({ marginTop: 20 });\n\n\n    $('.hm-page').css('background-color',
+        '#ffffff');\n    $('.hm-page').css('background-image', 'url(https://dz7r5lficzx0p.cloudfront.net/assets/images/themes/rustic_wood/rustic_wood.png)');\n
+        \   $('.hm-page').css('background-repeat', 'repeat');\n\n      $('h2, .hm-panel').css(
+        { 'font-family': 'Alegreya SC' } );\n\n      $('.hm-panel p, .hm-panel a,
+        .hm-panel .small, .caption').css( { 'font-family': 'Alegreya SC' } );\n\n
+        \   setSecondaryColor('#d4af8a');\n\n    function setSecondaryColor(col) {\n
+        \     var color = new less.tree.Color(col.replace(/#/g, ''));\n      var amount
+        = new less.tree.Value(15);\n      var lighter = less.tree.functions.lighten(color,
+        amount);\n      var darker = less.tree.functions.darken(color, amount);\n\n
+        \     $('.hm-panel').css({'background-color': lighter.toCSS(), 'border-color':
+        col});\n      $('.hm-panel-dark').css({'background-color': col, 'border-color':
+        darker.toCSS() });\n\n      if( (parseFloat(lighter.toHSL().l)<.5) ) { $('.hm-panel').css('color',
+        'white' ); }\n      else { $('.hm-panel').css('color', '#333333' ); }\n\n
+        \     $('.btn-hm').css({ 'background-color': col, 'border-color': darker.toCSS()
+        });\n      $('.hm-panel-dark .btn-hm').css({ 'background-color': lighter.toCSS(),
+        'border-color': col });\n      if( (parseFloat(color.toHSL().l)<.5) ) { $('.btn-hm').css('color',
+        'white' ); }\n      else { $('.btn-hm').css('color', '#333333' ); }\n    }\n\n
+        \   $('.btn-hm').click(function(){\n        setSecondaryColor(\"#d4af8a\");\n
+        \   });\n\n  });\n\n</script>\n\n  </body>\n</html>\n\n"
+    http_version: '1.1'
+  recorded_at: Wed, 11 Jun 2014 04:14:10 GMT
+recorded_with: VCR 2.9.0

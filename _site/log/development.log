@@ -1,0 +1,402 @@
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-17 17:24:00 -0400
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.1.1) lib/active_record/migration.rb:389:in `check_pending!'
+  activerecord (4.1.1) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/eli/.rbenv/versions/2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/eli/.rbenv/versions/2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/eli/.rbenv/versions/2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/eli/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/eli/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/eli/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/eli/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.3ms)
+  [1m[36m (1.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.6ms)[0m  select sqlite_version(*)
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateGifts (20140611032155)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "gifts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "location" varchar(255), "image_url" varchar(255), "url" varchar(255), "cost_cents" integer, "amount_received_cents" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20140611032155"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-17 17:24:34 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "gifts"
+  Rendered gifts/_list.html.erb (2.7ms)
+  Rendered pages/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 1078ms (Views: 1063.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-17 17:24:35 -0400
+
+
+Started GET "/assets/gifts.css?body=1" for 127.0.0.1 at 2014-06-17 17:24:35 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 17:24:35 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 17:24:35 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 17:24:35 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 17:24:35 -0400
+
+
+Started GET "/assets/gifts.js?body=1" for 127.0.0.1 at 2014-06-17 17:24:35 -0400
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-17 17:24:35 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 17:24:35 -0400
+
+
+Started GET "/gifts" for 127.0.0.1 at 2014-06-17 17:24:36 -0400
+Processing by GiftsController#index as */*
+Completed 500 Internal Server Error in 31ms
+
+ArgumentError (absolute URL needed (not nil)):
+  app/models/wanderable.rb:10:in `scrape_gifts'
+  app/controllers/gifts_controller.rb:5:in `index'
+
+
+  Rendered /Users/eli/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/eli/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.9ms)
+  Rendered /Users/eli/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (2.4ms)
+  Rendered /Users/eli/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (24.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-17 17:30:56 -0400
+Processing by PagesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "gifts"[0m
+  Rendered gifts/_list.html.erb (1.0ms)
+  Rendered pages/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/gifts.css?body=1" for 127.0.0.1 at 2014-06-17 17:30:56 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 17:30:56 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 17:30:56 -0400
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-17 17:30:56 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 17:30:56 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 17:30:56 -0400
+
+
+Started GET "/assets/gifts.js?body=1" for 127.0.0.1 at 2014-06-17 17:30:56 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 17:30:56 -0400
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-17 17:30:56 -0400
+
+
+Started GET "/gifts" for 127.0.0.1 at 2014-06-17 17:30:56 -0400
+Processing by GiftsController#index as */*
+Completed 500 Internal Server Error in 1ms
+
+ArgumentError (absolute URL needed (not nil)):
+  app/models/wanderable.rb:10:in `scrape_gifts'
+  app/controllers/gifts_controller.rb:5:in `index'
+
+
+  Rendered /Users/eli/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/eli/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.5ms)
+  Rendered /Users/eli/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.3ms)
+  Rendered /Users/eli/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (30.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-17 18:49:04 -0400
+Processing by PagesController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "gifts"
+  Rendered gifts/_list.html.erb (5.3ms)
+  Rendered pages/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 401ms (Views: 392.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 18:49:05 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 18:49:05 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 18:49:05 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 18:49:05 -0400
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-17 18:49:05 -0400
+
+
+Started GET "/assets/gifts.js?body=1" for 127.0.0.1 at 2014-06-17 18:49:05 -0400
+
+
+Started GET "/assets/gifts.css?body=1" for 127.0.0.1 at 2014-06-17 18:49:05 -0400
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-17 18:49:05 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 18:49:05 -0400
+
+
+Started GET "/gifts" for 127.0.0.1 at 2014-06-17 18:49:05 -0400
+Processing by GiftsController#index as */*
+Completed 500 Internal Server Error in 4ms
+
+ArgumentError (absolute URL needed (not nil)):
+  app/models/wanderable.rb:14:in `scrape_gifts'
+  app/controllers/gifts_controller.rb:5:in `index'
+
+
+  Rendered /Users/eli/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/eli/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (2.0ms)
+  Rendered /Users/eli/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.0ms)
+  Rendered /Users/eli/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (30.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-17 18:49:07 -0400
+Processing by PagesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "gifts"[0m
+  Rendered gifts/_list.html.erb (0.9ms)
+  Rendered pages/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-17 18:49:07 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 18:49:07 -0400
+
+
+Started GET "/assets/gifts.css?body=1" for 127.0.0.1 at 2014-06-17 18:49:07 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 18:49:07 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 18:49:07 -0400
+
+
+Started GET "/assets/gifts.js?body=1" for 127.0.0.1 at 2014-06-17 18:49:07 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 18:49:07 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 18:49:07 -0400
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-17 18:49:07 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 18:49:07 -0400
+
+
+Started GET "/gifts" for 127.0.0.1 at 2014-06-17 18:49:07 -0400
+Processing by GiftsController#index as */*
+Completed 500 Internal Server Error in 1ms
+
+ArgumentError (absolute URL needed (not nil)):
+  app/models/wanderable.rb:14:in `scrape_gifts'
+  app/controllers/gifts_controller.rb:5:in `index'
+
+
+  Rendered /Users/eli/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/eli/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.1ms)
+  Rendered /Users/eli/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.0ms)
+  Rendered /Users/eli/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (35.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-17 18:49:55 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "gifts"
+  Rendered gifts/_list.html.erb (2.8ms)
+  Rendered pages/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 92ms (Views: 76.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 18:49:56 -0400
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-17 18:49:56 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 18:49:56 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 18:49:56 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 18:49:56 -0400
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-17 18:49:56 -0400
+
+
+Started GET "/assets/gifts.js?body=1" for 127.0.0.1 at 2014-06-17 18:49:56 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 18:49:56 -0400
+
+
+Started GET "/assets/gifts.css?body=1" for 127.0.0.1 at 2014-06-17 18:49:56 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 18:49:56 -0400
+
+
+Started GET "/assets/gifts.js?body=1" for 127.0.0.1 at 2014-06-17 18:49:56 -0400
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-17 18:49:56 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 18:49:56 -0400
+
+
+Started GET "/gifts" for 127.0.0.1 at 2014-06-17 18:49:56 -0400
+Processing by GiftsController#index as */*
+Completed 500 Internal Server Error in 10ms
+
+ArgumentError (absolute URL needed (not nil)):
+  config/initializers/mechanize.rb:31:in `fetch_with_retry'
+  app/models/wanderable.rb:14:in `scrape_gifts'
+  app/controllers/gifts_controller.rb:5:in `index'
+
+
+  Rendered /Users/eli/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/eli/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.0ms)
+  Rendered /Users/eli/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.3ms)
+  Rendered /Users/eli/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (36.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-17 18:52:58 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "gifts"
+  Rendered gifts/_list.html.erb (3.5ms)
+  Rendered pages/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 105ms (Views: 88.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 18:52:58 -0400
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-17 18:52:58 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 18:52:58 -0400
+
+
+Started GET "/assets/gifts.js?body=1" for 127.0.0.1 at 2014-06-17 18:52:58 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 18:52:58 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 18:52:58 -0400
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-17 18:52:58 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 18:52:58 -0400
+
+
+Started GET "/assets/gifts.css?body=1" for 127.0.0.1 at 2014-06-17 18:52:58 -0400
+
+
+Started GET "/gifts" for 127.0.0.1 at 2014-06-17 18:52:58 -0400
+Processing by GiftsController#index as */*
+  [1m[36mGift Load (0.7ms)[0m  [1mSELECT  "gifts".* FROM "gifts"  WHERE "gifts"."name" = '5 night stay at Koa Kea'  ORDER BY "gifts"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "gifts" ("cost_cents", "created_at", "description", "image_url", "location", "name", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cost_cents", 300000], ["created_at", "2014-06-17 22:52:59.675277"], ["description", "5 night stay in an ocean view room with a daily breakfast buffet."], ["image_url", "https://res.cloudinary.com/wanderable/image/upload/c_limit,w_120/v1393898767/mwtpenjazleefyoi79c6.jpg"], ["location", "Koa Kea Hotel & Resort, Poipu Road, Koloa, HI, United States"], ["name", "5 night stay at Koa Kea"], ["updated_at", "2014-06-17 22:52:59.675277"], ["url", "https://wanderable.com/cart/KristenAndTodd20149278523/add?item_id=86296&num=1&purchase_mode=true&registry_id=11433"]]
+  [1m[35m (6.8ms)[0m  commit transaction
+  [1m[36mGift Load (0.2ms)[0m  [1mSELECT  "gifts".* FROM "gifts"  WHERE "gifts"."name" = 'Airfare'  ORDER BY "gifts"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gifts" ("cost_cents", "created_at", "image_url", "name", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?)[0m  [["cost_cents", 250000], ["created_at", "2014-06-17 22:52:59.693342"], ["image_url", "https://res.cloudinary.com/wanderable/image/upload/c_limit,w_120/v1393900650/r4c1ojraxdneayyfgsf1.jpg"], ["name", "Airfare"], ["updated_at", "2014-06-17 22:52:59.693342"], ["url", "https://wanderable.com/cart/KristenAndTodd20149278523/add?item_id=86305&num=1&purchase_mode=true&registry_id=11433"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mGift Load (0.2ms)[0m  [1mSELECT  "gifts".* FROM "gifts"  WHERE "gifts"."name" = 'Scuba diving'  ORDER BY "gifts"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gifts" ("cost_cents", "created_at", "image_url", "location", "name", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["cost_cents", 18000], ["created_at", "2014-06-17 22:52:59.698648"], ["image_url", "https://res.cloudinary.com/wanderable/image/upload/c_limit,w_120/v1393898252/enosrsqjioqxhayt6xwd.jpg"], ["location", "Seasport Divers, Poipu Road, Koloa, HI, United States"], ["name", "Scuba diving"], ["updated_at", "2014-06-17 22:52:59.698648"], ["url", "https://wanderable.com/cart/KristenAndTodd20149278523/add?item_id=86291&num=1&purchase_mode=true&registry_id=11433"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36mGift Load (0.1ms)[0m  [1mSELECT  "gifts".* FROM "gifts"  WHERE "gifts"."name" = 'Surfing Lessons'  ORDER BY "gifts"."id" ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "gifts" ("cost_cents", "created_at", "image_url", "location", "name", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["cost_cents", 25000], ["created_at", "2014-06-17 22:52:59.703539"], ["image_url", "https://res.cloudinary.com/wanderable/image/upload/c_limit,w_120/v1393896289/zkxtgdet7zzzuxkv9mpe.jpg"], ["location", "Nukumoi Surf Shop, Hoone Road, Koloa, HI, United States"], ["name", "Surfing Lessons"], ["updated_at", "2014-06-17 22:52:59.703539"], ["url", "https://wanderable.com/cart/KristenAndTodd20149278523/add?item_id=86279&num=1&purchase_mode=true&registry_id=11433"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mGift Load (0.2ms)[0m  [1mSELECT  "gifts".* FROM "gifts"  WHERE "gifts"."name" = 'Spa'  ORDER BY "gifts"."id" ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "gifts" ("cost_cents", "created_at", "description", "image_url", "location", "name", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cost_cents", 24000], ["created_at", "2014-06-17 22:52:59.707920"], ["description", "Massages!"], ["image_url", "https://res.cloudinary.com/wanderable/image/upload/c_limit,w_120/v1393900595/nk19kbyccymlgzkhdt21.jpg"], ["location", "Koa Kea Hotel & Resort, Poipu Road, Koloa, HI, United States"], ["name", "Spa"], ["updated_at", "2014-06-17 22:52:59.707920"], ["url", "https://wanderable.com/cart/KristenAndTodd20149278523/add?item_id=86292&num=1&purchase_mode=true&registry_id=11433"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36mGift Load (0.1ms)[0m  [1mSELECT  "gifts".* FROM "gifts"  WHERE "gifts"."name" = 'Spending money for the little things'  ORDER BY "gifts"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gifts" ("cost_cents", "created_at", "image_url", "name", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?)[0m  [["cost_cents", 40000], ["created_at", "2014-06-17 22:52:59.712986"], ["image_url", "https://res.cloudinary.com/wanderable/image/upload/c_limit,w_120/v1393900050/dkykvovlr0mk1wrtjqse.jpg"], ["name", "Spending money for the little things"], ["updated_at", "2014-06-17 22:52:59.712986"], ["url", "https://wanderable.com/cart/KristenAndTodd20149278523/add?item_id=86301&num=1&purchase_mode=true&registry_id=11433"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36mGift Load (0.2ms)[0m  [1mSELECT  "gifts".* FROM "gifts"  WHERE "gifts"."name" = 'Luau'  ORDER BY "gifts"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "gifts" ("cost_cents", "created_at", "image_url", "location", "name", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["cost_cents", 20500], ["created_at", "2014-06-17 22:52:59.718368"], ["image_url", "https://res.cloudinary.com/wanderable/image/upload/c_limit,w_120/v1393898471/mz7edi465urubthriak3.jpg"], ["location", "'Auli'I Luau at Sheraton Kauai Resort, Koloa, HI, United States"], ["name", "Luau"], ["updated_at", "2014-06-17 22:52:59.718368"], ["url", "https://wanderable.com/cart/KristenAndTodd20149278523/add?item_id=86293&num=1&purchase_mode=true&registry_id=11433"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36mGift Load (0.2ms)[0m  [1mSELECT  "gifts".* FROM "gifts"  WHERE "gifts"."name" = 'Volcano tour'  ORDER BY "gifts"."id" ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "gifts" ("cost_cents", "created_at", "image_url", "location", "name", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["cost_cents", 78000], ["created_at", "2014-06-17 22:52:59.723398"], ["image_url", "https://res.cloudinary.com/wanderable/image/upload/c_limit,w_120/v1393898624/cpvooclbvaakpkv5z0bz.jpg"], ["location", "Discover Hawaii Tours, Waimanu Street, Honolulu, HI, United States"], ["name", "Volcano tour"], ["updated_at", "2014-06-17 22:52:59.723398"], ["url", "https://wanderable.com/cart/KristenAndTodd20149278523/add?item_id=86295&num=1&purchase_mode=true&registry_id=11433"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "gifts"[0m
+  [1m[35mGift Load (0.2ms)[0m  SELECT "gifts".* FROM "gifts"   ORDER BY "gifts"."name" ASC
+  Rendered gifts/_list.html.erb (3.6ms)
+  Rendered gifts/index.html.erb (7.9ms)
+Completed 200 OK in 1124ms (Views: 13.3ms | ActiveRecord: 18.6ms)
