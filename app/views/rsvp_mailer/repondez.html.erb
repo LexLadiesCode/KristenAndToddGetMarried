@@ -1,0 +1,30 @@
+<h1>Hi there!</h1>
+
+<p>Someone has RSVPed for your wedding. :)</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @rsvp.full_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= mail_to @rsvp.email, @rsvp.email %>
+</p>
+
+<p>
+  <strong><%= @rsvp.attending? ? 'Yes' : 'No' %></strong>,
+  they will
+  <%= @rsvp.attending? ? 'be' : 'not be' %>
+  attending.
+</p>
+
+<p>
+  <strong># attending:</strong>
+  <%= pluralize @rsvp.guest_count, 'guest' %>
+</p>
+
+<p>
+  <strong>Song suggestion:</strong>
+  <%= @rsvp.song_suggestion %>
+</p>

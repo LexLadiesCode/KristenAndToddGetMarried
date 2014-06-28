@@ -1,0 +1,17 @@
+Hi there!
+
+Someone has RSVPed for your wedding. :)
+
+Name:
+<%= @rsvp.full_name %>
+
+Email:
+<%= @rsvp.email %>
+
+<%= @rsvp.attending? ? 'Yes' : 'No' %>, they will <%= @rsvp.attending? ? 'be' : 'not be' %> attending.
+
+# attending:
+<%= pluralize @rsvp.guest_count, 'guest' %>
+
+Song suggestion:
+<%= @rsvp.song_suggestion %>
