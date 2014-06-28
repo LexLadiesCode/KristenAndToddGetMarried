@@ -1,4 +1,5 @@
 class RsvpsController < ApplicationController
+  layout 'admin'
   before_action :set_rsvp, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
