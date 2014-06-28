@@ -4,6 +4,11 @@
 
   .gift-details {
     float: left;
+    font-weight: bold;
+    font-size: 20px;
+    
+      & > a{color: #FFFFFF;}
+
 
     & > *:last-child {
       margin-bottom: 0;
@@ -13,6 +18,14 @@
   .gift-thermometer {
     float: right;
     margin-right: 40px;
+  }
+
+  .gift-image {
+    background:#ffffff;
+    padding: 8px;
+    border: 1px solid #999999;
+    margin-right: 10px;
+    width: 200px;
   }
 
   li {
