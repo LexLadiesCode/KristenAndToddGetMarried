@@ -1,8 +1,8 @@
 class RsvpMailer < ActionMailer::Base
   default from: 'rsvp@kristenandtoddgetmarried.com'
 
-  def repondez rsvp_id
-    @rsvp = Rsvp.find(rsvp_id)
+  def repondez rsvp
+    @rsvp = rsvp
     subject = "New RSVP from #{@rsvp.full_name}!"
     from = name_and_email(@rsvp.full_name, @rsvp.email)
     mail(from: from, to: 'cheshire137@gmail.com', subject: subject) do |format|
