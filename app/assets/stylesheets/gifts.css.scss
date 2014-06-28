@@ -1,3 +1,7 @@
+.wanderable-link{
+  position: absolute;
+}
+
 .gifts-list {
   list-style: none;
   padding-left: 0;
@@ -24,6 +28,7 @@
     background:#ffffff;
     padding: 8px;
     border: 1px solid #999999;
+    margin-top: 10px;
     margin-right: 10px;
     width: 200px;
   }
@@ -80,3 +85,4 @@ $thermometer_roundness: 12px;
     border-radius: $thermometer_roundness;
   }
 }
+
