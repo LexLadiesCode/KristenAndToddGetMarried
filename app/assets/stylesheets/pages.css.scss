@@ -1,15 +1,8 @@
-$night-sky-color: rgb(22, 30, 82);
-$night-grass-color: rgb(22, 41, 28);
-$day-sky-color: rgb(97, 203, 255);
-$day-grass-color: rgb(118, 160, 68);
-$sunset-sky-color: rgb(227, 214, 87);
-$page-text-font: 'Shadows into Light Two', sans-serif;
-$page-header-font: 'Acme', sans-serif;
+@import "variables";
 
 body.pages {
   color: #fff;
   font-family: $page-text-font;
-  font-size: 1.5em;
   overflow-x: hidden;
   letter-spacing: 0.1em;
 
@@ -26,6 +19,7 @@ body.pages {
 
 section {
   min-height: 400px;
+  padding-bottom: 80px;
 }
 
 #intro {
@@ -205,6 +199,17 @@ section {
 
 #registry {
   background-color: $sunset-sky-color;
+  color: darken($sunset-sky-color, 50%);
+
+  a {
+    &, &:link, &:visited, &:active {
+      color: darken($sunset-sky-color, 30%);
+    }
+
+    &:hover, &:focus {
+      color: darken($sunset-sky-color, 40%);
+    }
+  }
 }
 
 span.todd, span.kristen, span.artemus, span.love {
@@ -225,4 +230,9 @@ span.artemus {
 
 span.love {
   color: rgb(230, 44, 79);
+}
+
+h2.section-header {
+  margin-top: 80px;
+  margin-bottom: 40px;
 }

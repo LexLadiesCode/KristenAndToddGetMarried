@@ -1,3 +1,5 @@
+@import "variables";
+
 .wanderable-link{
   margin-right: auto;
   margin-left: auto;
@@ -14,27 +16,19 @@
   padding-left: 0;
 
   .gift-details {
-    float: left;
-    font-weight: bold;
-    font-size: 20px;
-    
-      & > a{color: #FFFFFF;}
-
-
     & > *:last-child {
       margin-bottom: 0;
     }
   }
 
   .gift-thermometer {
-    float: right;
     margin-right: 40px;
     margin-top: 80px;
     margin-bottom: 80px;
   }
 
   .gift-image {
-    background:#ffffff;
+    background: #ffffff;
     padding: 8px;
     border: 1px solid #999999;
     margin-top: 10px;
@@ -45,14 +39,11 @@
   li {
     & + li {
       margin-top: 40px;
-      border-top: 1px solid #ddd;
+      border-top: 1px solid darken($sunset-sky-color, 20%);
       padding-top: 40px;
     }
   }
 }
-
-$mercury_color: rgb(20, 100, 20);
-$thermometer_roundness: 12px;
 
 .thermometer {
   position: relative;
