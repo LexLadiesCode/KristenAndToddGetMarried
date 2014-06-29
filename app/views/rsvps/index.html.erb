@@ -1,3 +1,9 @@
+<ul class="list-inline">
+  <li><%= pluralize @total_guest_count, 'guest' %> attending</li>
+  <li><%= pluralize @total_not_attending, 'person' %> not attending</li>
+  <li><%= pluralize Rsvp.count, 'RSVP' %></li>
+</ul>
+<hr>
 <table class="table table-striped">
   <thead>
     <tr>

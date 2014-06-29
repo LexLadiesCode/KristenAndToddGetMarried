@@ -7,6 +7,8 @@ class RsvpsController < ApplicationController
   # GET /rsvps.json
   def index
     @rsvps = Rsvp.all
+    @total_guest_count = Rsvp.total_guest_count
+    @total_not_attending = Rsvp.total_not_attending
   end
 
   # GET /rsvps/1
@@ -16,7 +18,7 @@ class RsvpsController < ApplicationController
 
   # GET /rsvps/new
   def new
-    @rsvp = Rsvp.new
+    @rsvp = Rsvp.new(guest_count: 0)
   end
 
   # GET /rsvps/1/edit
@@ -34,7 +36,10 @@ class RsvpsController < ApplicationController
         }
         format.json { render :show, status: :created, location: @rsvp }
       else
-        format.html { render :new }
+        format.html {
+          flash[:warning] = 'There was a problem with your RSVP. Please try again: ' + @rsvp.errors.full_messages.join(', ')
+          redirect_to root_path
+        }
         format.json { render json: @rsvp.errors, status: :unprocessable_entity }
       end
     end

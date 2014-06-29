@@ -1,3 +1,11 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+$ ->
+  $('input#rsvp_attending').change ->
+    checkbox = $(this)
+    guest_count_wrapper = $('#guest-count-wrapper')
+    guest_count_field = $('#rsvp_guest_count')
+    if checkbox.is(':checked')
+      guest_count_field.val('1')
+      guest_count_wrapper.fadeIn('fast')
+    else
+      guest_count_field.val('0')
+      guest_count_wrapper.fadeOut('fast')
