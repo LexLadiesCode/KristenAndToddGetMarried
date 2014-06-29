@@ -1,4 +1,4 @@
-$(document).ready ->
+$ ->
   $(".single-item").slick
     dots: true
     infinite: true
@@ -157,7 +157,6 @@ $(document).ready ->
       $(".fixed-header").show()
     else
       $(".fixed-header").hide()
-    return
 
   $("ul.nav#sign-nav a").on "click", (event) ->
     event.preventDefault()
@@ -166,6 +165,4 @@ $(document).ready ->
     $("body, html").animate
       scrollTop: targetST + "px"
     , 300
-    return
 
-  return
