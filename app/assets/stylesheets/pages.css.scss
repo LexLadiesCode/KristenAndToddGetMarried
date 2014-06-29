@@ -139,7 +139,7 @@ section {
   }
 
   .text_background {
-    background-color: lighten($day-grass-color,10%);//purple: lighten($night-sky-color, 50%);
+    background-color: lighten($day-grass-color,10%);//purple:lighten($night-sky-color, 50%);
     font-size: 22px;
     line-height: 1.5;
     padding-top: 20px;
@@ -154,12 +154,16 @@ section {
   }
   .directions {
     z-index: 20;
-    top: -1150px;
+    top: -1300px;
   }
   .tree {
-    left: 200px;
-    top: -500px;
+    left: 40px;
+    top: -616px;
     z-index: 15;
+  }
+  .big-text {
+    display: block;
+    font-size: 3em;
   }
   .fields {
     top: 300px;
@@ -171,6 +175,9 @@ section {
     height: 400px;
     top: 190px;
     z-index: 5;
+  }
+  .sign-row {
+    padding-top: 120px;
   }
   .sign-post {
     background: url("location/sign_post.png") no-repeat;
