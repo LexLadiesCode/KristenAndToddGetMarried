@@ -140,7 +140,6 @@ section {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height: 50%;
     width: 80%;
   }
   .text_background {
@@ -201,4 +200,20 @@ section {
 
 #registry {
   background-color: $sunset-sky-color;
+}
+
+span.todd {
+  color: orangered;
+}
+
+span.kristen {
+  color: teal;
+}
+
+span.artemus {
+  color: purple;
+}
+
+span.love {
+  color: crimson;
 }
