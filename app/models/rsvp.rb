@@ -1,5 +1,5 @@
 class Rsvp < ActiveRecord::Base
-  after_create :send_email
+  after_create :send_emails
 
   scope :attending, ->{ where(attending: true) }
 
@@ -22,8 +22,10 @@ class Rsvp < ActiveRecord::Base
     "#{first_name} #{last_name}".strip
   end
 
-  def send_email
-    RsvpMailer.repondez(self).deliver
+  def send_emails
+    User.all.each do |user|
+      RsvpMailer.repondez(self, user.email).deliver
+    end
   end
 
   private
