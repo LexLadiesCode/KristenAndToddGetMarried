@@ -3,10 +3,12 @@
     <% gifts.each do |gift| %>
       <li>
         <div class="row">
-          <div class="col-md-7">
+          <div class="col-md-7 text-center">
             <div class="gift-details">
               <% if gift.image_url.present? %>
-                <%= image_tag gift.image_url, alt: '', class: 'gift-image' %>
+                <p>
+                  <%= image_tag gift.image_url, alt: '', class: 'gift-image' %>
+                </p>
               <% end %>
               <%= link_to_if gift.url.present?, gift.name, gift.url %>
               <% if gift.description.present? %>
@@ -21,7 +23,7 @@
               <% end %>
             </div>
           </div>
-          <div class="col-md-5">
+          <div class="col-md-5 text-center">
             <div id="gift-thermometer-<%= gift.id %>" class="gift-thermometer thermometer horizontal">
               <div class="track">
                 <div class="progress" data-percent="<%= gift.percent_funded %>">
@@ -29,6 +31,9 @@
                 </div>
               </div>
             </div>
+            <% if gift.url.present? %>
+              <%= link_to 'Contribute to this gift!', gift.url, class: 'contribute-link' %>
+            <% end %>
           </div>
         </div>
       </li>

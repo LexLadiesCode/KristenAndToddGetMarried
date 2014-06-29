@@ -1,19 +1,22 @@
 @import "variables";
 
-.wanderable-link{
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 15px;
-  margin-bottom: 12px;
+#gifts-list-wrapper {
+  margin-bottom: 60px;
 }
 
-.registry-text{
-  margin-bottom: 100px;
+.gift-image, .wanderable-link {
+  background: #ffffff;
+  border: 1px solid #999999;
+  display: block;
 }
 
 .gifts-list {
   list-style: none;
   padding-left: 0;
+
+  .contribute-link {
+    font-size: 30px;
+  }
 
   .gift-details {
     & > *:last-child {
@@ -22,18 +25,18 @@
   }
 
   .gift-thermometer {
-    margin-right: 40px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 80px;
-    margin-bottom: 80px;
+    margin-bottom: 20px;
   }
 
   .gift-image {
-    background: #ffffff;
-    padding: 8px;
-    border: 1px solid #999999;
     margin-top: 10px;
-    margin-right: 10px;
-    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    padding: 8px;
   }
 
   li {
