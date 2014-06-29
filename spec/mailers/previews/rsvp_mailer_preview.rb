@@ -5,6 +5,6 @@ class RsvpMailerPreview < ActionMailer::Preview
     else
       rsvp = FactoryGirl.build(:rsvp, :not_attending)
     end
-    RsvpMailer.repondez(rsvp)
+    RsvpMailer.repondez(rsvp, 'test@example.com')
   end
 end

@@ -1,16 +1,10 @@
-$night-sky-color: rgb(22, 30, 82);
-$night-grass-color: rgb(22, 41, 28);
-$day-sky-color: rgb(97, 203, 255);
-$day-grass-color: rgb(118, 160, 68);
-$sunset-sky-color: rgb(227, 214, 87);
-$page-text-font: 'Shadows into Light Two', sans-serif;
-$page-header-font: 'Acme', sans-serif;
+@import "variables";
 
 body.pages {
   color: #fff;
   font-family: $page-text-font;
-  font-size: 1.5em;
   overflow-x: hidden;
+  letter-spacing: 0.1em;
 
   .btn {
     font-family: $page-text-font;
@@ -25,6 +19,7 @@ body.pages {
 
 section {
   min-height: 400px;
+  padding-bottom: 80px;
 }
 
 #intro {
@@ -136,15 +131,19 @@ section {
   background-color: $day-grass-color;
   min-height: 600px;
   background-color: lighten($night-grass-color, 50%);
+
   .comsize {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    max-width: 100%;
   }
+
   .text_background {
     background-color: lighten($night-grass-color, 50%);
-    font-size: 20px;
+    font-size: 22px;
+    line-height: 1.5;
+    padding-top: 20px;
   }
 }
 
@@ -200,20 +199,46 @@ section {
 
 #registry {
   background-color: $sunset-sky-color;
+  color: darken($sunset-sky-color, 50%);
+
+  a {
+    &, &:link, &:visited, &:active {
+      color: darken($sunset-sky-color, 30%);
+    }
+
+    &:hover, &:focus {
+      color: darken($sunset-sky-color, 40%);
+    }
+  }
+}
+
+span.todd, span.kristen, span.artemus, span.love {
+  font-size: 26px;
 }
 
 span.todd {
-  color: orangered;
+  color: rgb(211, 80, 32);
 }
 
 span.kristen {
-  color: teal;
+  color: rgb(0, 97, 97);
 }
 
 span.artemus {
-  color: purple;
+  color: rgb(151, 16, 151);
 }
 
 span.love {
-  color: crimson;
+  color: rgb(230, 44, 79);
+}
+
+h2.section-header {
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+
+.notifications-container {
+  .alert {
+    margin-bottom: 0;
+  }
 }

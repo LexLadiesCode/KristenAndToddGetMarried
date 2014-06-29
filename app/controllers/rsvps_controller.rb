@@ -1,12 +1,14 @@
 class RsvpsController < ApplicationController
   layout 'admin'
   before_action :set_rsvp, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:create]
 
   # GET /rsvps
   # GET /rsvps.json
   def index
     @rsvps = Rsvp.all
+    @total_guest_count = Rsvp.total_guest_count
+    @total_not_attending = Rsvp.total_not_attending
   end
 
   # GET /rsvps/1
@@ -16,7 +18,7 @@ class RsvpsController < ApplicationController
 
   # GET /rsvps/new
   def new
-    @rsvp = Rsvp.new
+    @rsvp = Rsvp.new(guest_count: 0)
   end
 
   # GET /rsvps/1/edit
@@ -27,13 +29,17 @@ class RsvpsController < ApplicationController
   # POST /rsvps.json
   def create
     @rsvp = Rsvp.new(rsvp_params)
-
     respond_to do |format|
       if @rsvp.save
-        format.html { redirect_to @rsvp, notice: 'Rsvp was successfully created.' }
+        format.html {
+          redirect_to root_path, notice: 'RSVPed!'
+        }
         format.json { render :show, status: :created, location: @rsvp }
       else
-        format.html { render :new }
+        format.html {
+          flash[:warning] = 'There was a problem with your RSVP. Please try again: ' + @rsvp.errors.full_messages.join(', ')
+          redirect_to root_path
+        }
         format.json { render json: @rsvp.errors, status: :unprocessable_entity }
       end
     end

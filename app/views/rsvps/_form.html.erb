@@ -9,15 +9,21 @@
     </div>
   <% end %>
   <div class="form-group">
-    <%= f.label :first_name, class: "control-label col-sm-4" %>
+    <%= f.label :first_name, 'First name:', class: "control-label col-sm-4" %>
     <div class="col-sm-8">
       <%= f.text_field :first_name, class: "form-control", placeholder: "Your first name" %>
     </div>
   </div>
   <div class="form-group">
-    <%= f.label :last_name, class: "control-label col-sm-4" %>
+    <%= f.label :last_name, 'Last name:', class: "control-label col-sm-4" %>
     <div class="col-sm-8">
       <%= f.text_field :last_name, class: "form-control", placeholder: "Your last name" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :email, 'Email address:', class: "control-label col-sm-4" %>
+    <div class="col-sm-8">
+      <%= f.email_field :email, class: "form-control", placeholder: '@' %>
     </div>
   </div>
   <div class="form-group">
@@ -28,19 +34,19 @@
       </label>
     </div>
   </div>
-  <div class="form-group">
-    <%= f.label :email, 'Email address:', class: "control-label col-sm-4" %>
-    <div class="col-sm-8">
-      <%= f.text_field :email, class: "form-control", placeholder: '@' %>
-    </div>
-  </div>
-  <div class="form-group">
+  <div class="form-group" style="display: none" id="guest-count-wrapper">
     <%= f.label :guest_count, 'How many people will be attending?', class: "control-label col-sm-4" %>
     <div class="col-sm-8">
       <%= f.number_field :guest_count, class: "form-control", step: 1, min: 0 %>
       <p class="help-block">
         Include yourself
       </p>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :song_suggestion, 'Suggest a song for us:', class: "control-label col-sm-4" %>
+    <div class="col-sm-8">
+      <%= f.text_field :song_suggestion, class: "form-control" %>
     </div>
   </div>
   <div class="form-group">

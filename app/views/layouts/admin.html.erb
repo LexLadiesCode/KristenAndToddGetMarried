@@ -26,6 +26,12 @@
             <li>
               <%= link_to 'Public Site', root_path %>
             </li>
+            <li>
+              <%= link_to "Signed in as #{current_user.name}", edit_user_registration_path %>
+            </li>
+            <li>
+              <%= link_to 'Sign Out', destroy_user_session_path %>
+            </li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
