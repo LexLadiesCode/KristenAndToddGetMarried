@@ -128,9 +128,8 @@ section {
 }
 
 #story {
-  background-color: $day-grass-color;
   min-height: 600px;
-  background-color: lighten($night-grass-color, 50%);
+  background-color: lighten($day-grass-color,10%);//purple: lighten($night-sky-color, 50%);
 
   .comsize {
     display: block;
@@ -140,7 +139,7 @@ section {
   }
 
   .text_background {
-    background-color: lighten($night-grass-color, 50%);
+    background-color: lighten($day-grass-color,10%);//purple: lighten($night-sky-color, 50%);
     font-size: 22px;
     line-height: 1.5;
     padding-top: 20px;
