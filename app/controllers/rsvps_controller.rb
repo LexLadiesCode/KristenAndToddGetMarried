@@ -1,7 +1,7 @@
 class RsvpsController < ApplicationController
   layout 'admin'
   before_action :set_rsvp, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:create]
 
   # GET /rsvps
   # GET /rsvps.json
@@ -27,10 +27,11 @@ class RsvpsController < ApplicationController
   # POST /rsvps.json
   def create
     @rsvp = Rsvp.new(rsvp_params)
-
     respond_to do |format|
       if @rsvp.save
-        format.html { redirect_to @rsvp, notice: 'Rsvp was successfully created.' }
+        format.html {
+          redirect_to root_path, notice: 'RSVPed!'
+        }
         format.json { render :show, status: :created, location: @rsvp }
       else
         format.html { render :new }
