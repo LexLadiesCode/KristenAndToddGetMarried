@@ -143,22 +143,33 @@
       <div class="col-md-6 sign-post">
         <div class="sign">
           <p><a href="#" data-toggle="modal" data-target="#mapModal">Map</a></p>
-          <p><a href="#">Directions</a></p>
-          <p><a href="#">Hotels</a></p>
+          <p><a href="#" data-toggle="modal" data-target="#directionsModal">Directions</a></p>
+          <p><a href="#" data-toggle="modal" data-target="#hotelsModal">Hotels</a></p>
         </div>
       </div>
     </div>
   </div>
+  <div id="mapModal" class="modal fade" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+    </div>
+    <div class="modal-body">
+      <h2>Map Goes here</h2>
+    </div>
+  </div>
+</div>
+  </div>
+  <div id="directionsModal" class="modal fade" role="dialog" aria-hidden="true">
+    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+    <h2>Directions Go here</h2>
+  </div>
+  <div id="hotelsModal" class="modal fade" role="dialog" aria-hidden="true">
+    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+    <h2>Hotel, activities, etc go here</h2>
+  </div>
 </section>
-<div id="mapModal" style="z-index:50;">
-  <h2>Map Goes here</h2>
-</div>
-<div id="directionsModal">
-  <h2>Directions Go here</h2>
-</div>
-<div id="hotelsModal">
-  <h2>Hotel, activities, etc go here</h2>
-</div>
 
 <section id="rsvp">
   <div class="container">
