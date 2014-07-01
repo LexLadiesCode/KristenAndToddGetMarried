@@ -12,7 +12,7 @@ in this repository for privacy purposes.
 1. `bundle`
 1. `bundle exec rake db:migrate`
 1. `cp dotenv.sample .env` (Windows users must use command 'copy dotenv.sample .env')
-1. Edit `.env` and update the Wanderable registry URL.
+1. Edit `.env` and update the Wanderable registry URL. Also fill out the Gmail user name and password (any Google account will do, even LexLadiesCode's) so the mailers can send RSVP emails.
 1. `rails s`
 
 ## How to Run Tests

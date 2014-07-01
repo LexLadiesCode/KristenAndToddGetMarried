@@ -1,0 +1,19 @@
+<% if (warning=flash[:warning]).present? || notice.present? || alert.present? %>
+  <div class="notifications-container text-center">
+    <% if warning.present? %>
+      <div class="alert alert-danger">
+        <%= warning %>
+      </div>
+    <% end %>
+    <% if alert.present? %>
+      <div class="alert alert-warning">
+        <%= alert %>
+      </div>
+    <% end %>
+    <% if notice.present? %>
+      <div class="alert alert-success">
+        <%= notice %>
+      </div>
+    <% end %>
+  </div>
+<% end %>

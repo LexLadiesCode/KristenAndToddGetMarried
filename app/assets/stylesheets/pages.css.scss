@@ -1,11 +1,29 @@
-$night-sky-color: rgb(22, 30, 82);
-$night-grass-color: rgb(22, 41, 28);
-$day-sky-color: rgb(97, 203, 255);
-$day-grass-color: rgb(118, 160, 68);
-$sunset-sky-color: rgb(227, 214, 87);
+@import "variables";
+
+body.pages {
+  color: #fff;
+  font-family: $page-text-font;
+  overflow-x: hidden;
+  letter-spacing: 0.1em;
+
+  .btn {
+    font-family: $page-text-font;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: $page-header-font;
+    text-align: center;
+    font-size: 40px;
+  }
+}
+
+.modal {
+  color: black;
+}
 
 section {
   min-height: 400px;
+  padding-bottom: 80px;
 }
 
 #intro {
@@ -114,19 +132,21 @@ section {
 }
 
 #story {
-  background-color: $day-grass-color;
   min-height: 600px;
-  background-color: lighten($night-grass-color, 50%);
+  background-color: lighten($day-grass-color,10%);//purple: lighten($night-sky-color, 50%);
+
   .comsize {
     display: block;
     margin-left: auto;
-    margin-right: auto;   
-    height: 50%;
-    width: 80%;
+    margin-right: auto;
+    max-width: 100%;
   }
+
   .text_background {
-    background-color: lighten($night-grass-color, 50%);
-    font-size: 20px;
+    background-color: lighten($day-grass-color,10%);//purple:lighten($night-sky-color, 50%);
+    font-size: 22px;
+    line-height: 1.5;
+    padding-top: 20px;
   }
 }
 
@@ -138,23 +158,31 @@ section {
   }
   .directions {
     z-index: 20;
-    top: -1150px;
+    top: -1300px;
   }
   .tree {
-    left: 200px;
-    top: -500px;
+    left: 40px;
+    top: -616px;
     z-index: 15;
+  }
+  .big-text {
+    display: block;
+    font-size: 3em;
   }
   .fields {
     top: 300px;
-    left: 200px;
+    left: -500px;
     z-index: 10;
+    height: 215px;
   }
   .fields-foreground {
     background-color: $day-grass-color;
     height: 400px;
     top: 190px;
     z-index: 5;
+  }
+  .sign-row {
+    padding-top: 120px;
   }
   .sign-post {
     background: url("location/sign_post.png") no-repeat;
@@ -182,4 +210,46 @@ section {
 
 #registry {
   background-color: $sunset-sky-color;
+  color: darken($sunset-sky-color, 50%);
+
+  a {
+    &, &:link, &:visited, &:active {
+      color: darken($sunset-sky-color, 30%);
+    }
+
+    &:hover, &:focus {
+      color: darken($sunset-sky-color, 40%);
+    }
+  }
+}
+
+span.todd, span.kristen, span.artemus, span.love {
+  font-size: 26px;
+}
+
+span.todd {
+  color: rgb(211, 80, 32);
+}
+
+span.kristen {
+  color: rgb(0, 97, 97);
+}
+
+span.artemus {
+  color: rgb(151, 16, 151);
+}
+
+span.love {
+  color: rgb(230, 44, 79);
+}
+
+h2.section-header {
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+
+.notifications-container {
+  .alert {
+    margin-bottom: 0;
+  }
 }

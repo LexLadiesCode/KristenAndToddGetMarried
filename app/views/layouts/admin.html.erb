@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin - Kristen and Todd are getting married!</title>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="admin <%= controller.controller_name %> <%= controller.action_name %>">
+  <div class="container">
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <%= link_to 'Wedding Admin', rsvps_path, class: 'navbar-brand' %>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li>
+              <%= link_to 'RSVPs Admin', rsvps_path %>
+            </li>
+            <li>
+              <%= link_to 'Public Site', root_path %>
+            </li>
+            <li>
+              <%= link_to "Signed in as #{current_user.name}", edit_user_registration_path %>
+            </li>
+            <li>
+              <%= link_to 'Sign Out', destroy_user_session_path %>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <%= render 'layouts/notifications' %>
+    <%= yield %>
+  </div>
+  <%= javascript_include_tag 'application' %>
+</body>
+</html>

@@ -1,31 +1,29 @@
-
-
 <section id="intro">
   <div class="sky"></div>
   <div class="foreground">
-    <div class="fireflies"></div>
+    <div class="fireflies"><div class="firefly"></div></div>
     <%= image_tag("intro/bush.png", class: "bush scenery") %>
-    <div class="fireflies"></div>
+    <div class="fireflies"><div class="firefly"></div></div>
   </div>
   <div class="midground">
     <%= image_tag("intro/fire.png", class: "fire scenery") %>
     <%= image_tag("intro/bush.png", class: "bush-front scenery") %>
-    <div class="fireflies"></div>
+    <div class="fireflies"><div class="firefly"></div></div>
     <%= image_tag("intro/bush.png", class: "bush-back scenery") %>
-      <div class="fireflies"></div>
+      <div class="fireflies"><div class="firefly"></div></div>
     <%= image_tag("intro/tent.png", class: "tent scenery") %>
   </div>
   <div class="background">
-    <div class="fireflies"></div>
+    <div class="fireflies"><div class="firefly"></div></div>
     <%= image_tag("intro/bush.png", class: "bush scenery") %>
   </div>
   <div class="container">
     <div class="row">
       <div class="col-md-4"></div>
       <div class="col-md-4">
-        <div class="fireflies">
+        <div class="fireflies"><div class="firefly"></div>
         </div>
-        <nav>
+        <nav id="sign-nav">
           <ul>
             <li class="sign">
               <a id="logo" href="#">Kristen and Todd Get Married!</a>
@@ -54,27 +52,73 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h2>Our Story</h2>
-          <div class="slider single-item">
-            <div class="text_background"> <p> <font color= "OrangeRed">Todd </font> and <font color= "Teal">Kristen </font> first met years ago through mutual friends. After meeting several times they realized they had many things in common, such as a fondness for Dwight Yoakam songs. 
-            <p><font color= "OrangeRed">Todd </font> decided to ask <font color= "Teal">Kristen </font> on a date. He was nervous, but determined.</div>
-            <div><%= image_tag("story/firstdate.jpg", class: "comsize") %></div>
-            <div class="text_background"> <p> That weekend they watched X-Men: First Class and ate California tart frozen yogurt at Fro-Jo's. They sat on a blanket under the stars and shared stories.
-
-            <p>For one reason or another <font color= "OrangeRed">Todd </font> and <font color= "Teal">Kristen </font> drifted. However, it was clear there was something between them.
-
-            <p>A couple of months later some of their friends planned a trip to a corn maze and invited <font color= "OrangeRed">Todd </font> and <font color= "Teal">Kristen </font> along. They had a great time. That night they carved pumpkins together.
-
-            <p>Once more <font color= "OrangeRed">Todd </font> asked <font color= "Teal">Kristen </font> on a date.</div>
-            <div><%= image_tag("story/secondfirstdate.jpg", class: "comsize") %></div>
-            <div class="text_background"> <p> <font color= "OrangeRed">Todd </font> and <font color= "Teal">Kristen </font> went on many more dates and spent countless hours together. Soon it was <font color= "Cranberry">LOVE</font>. The two went on camping trips, visited new places, played video games, and watched lots of TV shows.
-
-            <p>One day <font color= "OrangeRed">Todd </font> and <font color= "Teal">Kristen </font> were sitting in the living room with <font color= "Purple">Artemus</font>.</div>
-            <div><%= image_tag("story/artemuspredictsthefuture.jpg", class: "comsize") %></div>
-            <div class="text_background"> <p> After that things became more serious. Sometime later <font color= "OrangeRed">Todd </font> and <font color= "Teal">Kristen </font> took a trip to Boston. The day before they left for home <font color= "OrangeRed">Todd </font> took <font color= "Teal">Kristen </font> on a walk through a beautiful Boston park.</div>
-            <div><%= image_tag("story/theproposal.jpg", class: "comsize") %></div>
-            <div class="text_background"> <p><td width="400px"><p> And they are still having adventures.</div>
-          </div> 
+        <h2 class="section-header">Our Story</h2>
+        <div class="slider single-item">
+          <div class="text_background">
+            <div class="row">
+              <div class="col-md-6 col-md-offset-3">
+                <p>
+                  <span class="todd">Todd</span> and <span class="kristen">Kristen</span> first met years ago through mutual friends. After meeting several times they realized they had many things in common, such as a fondness for Dwight Yoakam songs.
+                </p>
+                <p>
+                  <span class="todd">Todd</span> decided to ask <span class="kristen">Kristen</span> on a date. He was nervous, but determined.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div><%= image_tag("story/firstdate.jpg", class: "comsize") %></div>
+          <div class="text_background">
+            <div class="row">
+              <div class="col-md-6 col-md-offset-3">
+                <p>
+                  That weekend they watched X-Men: First Class and ate California tart frozen yogurt at Fro-Jo's. They sat on a blanket under the stars and shared stories.
+                </p>
+                <p>
+                  For one reason or another <span class="todd">Todd</span> and <span class="kristen">Kristen</span> drifted. However, it was clear there was something between them.
+                </p>
+                <p>
+                  A couple of months later some of their friends planned a trip to a corn maze and invited <span class="todd">Todd</span> and <span class="kristen">Kristen</span> along. They had a great time. That night they carved pumpkins together.
+                </p>
+                <p>
+                  Once more <span class="todd">Todd</span> asked <span class="kristen">Kristen</span> on a date.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div><%= image_tag("story/secondfirstdate.jpg", class: "comsize") %></div>
+          <div class="text_background">
+            <div class="row">
+              <div class="col-md-6 col-md-offset-3">
+                <p>
+                  <span class="todd">Todd</span> and <span class="kristen">Kristen</span> went on many more dates and spent countless hours together. Soon it was <span class="love">LOVE</span>. The two went on camping trips, visited new places, played video games, and watched lots of TV shows.
+                </p>
+                <p>
+                  One day <span class="todd">Todd</span> and <span class="kristen">Kristen</span> were sitting in the living room with <span class="artemus">Artemus</span>.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div><%= image_tag("story/artemuspredictsthefuture.jpg", class: "comsize") %></div>
+          <div class="text_background">
+            <div class="row">
+              <div class="col-md-6 col-md-offset-3">
+                <p>
+                  After that things became more serious. Sometime later <span class="todd">Todd</span> and <span class="kristen">Kristen</span> took a trip to Boston. The day before they left for home <span class="todd">Todd</span> took <span class="kristen">Kristen</span> on a walk through a beautiful Boston park.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div><%= image_tag("story/theproposal.jpg", class: "comsize") %></div>
+          <div class="text_background">
+            <div class="row">
+              <div class="col-md-6 col-md-offset-3">
+                <p>
+                  And they are still having adventures.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -87,32 +131,68 @@
   <div class="scenery directions container">
     <div class="row">
       <div class="col-md-6">
-        <h2 class="subheader">September <span class="big-text">21</span>, 2014</h2>
+        <h2 class="subheader">September <span class="big-text">21</span> 2014</h2>
       </div>
       <div class="col-md-6">
         <h2 class="subheader">Moonlight Fields Farm<br />Nicholasville, KY</h2>
       </div>
     </div>
-    <div class="row" style="padding-top: 250px;">
+    <div class="row sign-row">
       <div class="col-md-6">
       </div>
       <div class="col-md-6 sign-post">
         <div class="sign">
-          <p><a href="#">Map</a></p>
-          <p><a href="#">Directions</a></p>
-          <p><a href="#">Hotels</a></p>
+          <p><a href="#" data-toggle="modal" data-target="#mapModal">Map</a></p>
+          <p><a href="#" data-toggle="modal" data-target="#directionsModal">Directions</a></p>
+          <p><a href="#" data-toggle="modal" data-target="#hotelsModal">Hotels</a></p>
         </div>
       </div>
     </div>
+  </div>
+  <div id="mapModal" class="modal fade" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        </div>
+        <div class="modal-body">
+          <h2>Map Goes here</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="directionsModal" class="modal fade" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        </div>
+        <div class="modal-body">
+          <h2>Directions Go here</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="hotelsModal" class="modal fade" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          </div>
+          <div class="modal-body">
+            <h2>Hotel information, maps, activities go here</h2>
+          </div>
+        </div>
+      </div>
   </div>
 </section>
 
 <section id="rsvp">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <h2>RSVP</h2>
-        <%= render '/rsvps/form' %>
+      <div class="col-md-8 col-md-offset-2">
+        <h2 class="section-header">RSVP</h2>
+        <%= render 'rsvps/form' %>
       </div>
     </div>
   </div>
@@ -122,9 +202,17 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h2>Registry</h2>
+        <h2 class="section-header">Registry</h2>
         <div id="gifts-list-wrapper" data-url="<%= gifts_url %>">
           <%= render 'gifts/list', gifts: @gifts %>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 text-center">
+            <p>
+              Honeymoon registry provided by <%= link_to 'Wanderable', ENV['WANDERABLE_URL'] %>.
+            </p>
+            <%= link_to image_tag('wanderable.jpg', class: 'wanderable-image', alt: 'Wanderable'), ENV['WANDERABLE_URL'], target: '_blank', class: 'wanderable-link' %>
+          </div>
         </div>
       </div>
     </div>
