@@ -6,6 +6,7 @@
 #
 default: &default
   adapter: sqlite3
+  encoding: unicode 
   pool: 5
   timeout: 5000
 
