@@ -26,15 +26,7 @@
       <%= f.email_field :email, class: "form-control", placeholder: '@' %>
     </div>
   </div>
-  <div class="form-group">
-    <div class="col-sm-offset-4 col-sm-8">
-      <label class="checkbox">
-        <%= f.check_box :attending %>
-        Yes, I'll be attending
-      </label>
-    </div>
-  </div>
-  <div class="form-group" style="display: none" id="guest-count-wrapper">
+  <div class="form-group" id="guest-count-wrapper">
     <%= f.label :guest_count, 'How many people will be attending?', class: "control-label col-sm-4" %>
     <div class="col-sm-8">
       <%= f.number_field :guest_count, class: "form-control", step: 1, min: 0 %>
@@ -44,8 +36,8 @@
     </div>
   </div>
   <div class="form-group">
-    <%= f.label :song_suggestion, class: "control-label  col-sm-3"%>
-    <div class="col-sm-6">
+    <%= f.label :song_suggestion, 'Song suggestion:', class: "control-label col-sm-4"%>
+    <div class="col-sm-8">
       <%= f.text_field :song_suggestion, class: "form-control", placeholder: "What should we play at the reception?" %>
     </div>
   </div>
