@@ -42,13 +42,13 @@
     </div>
   </div>
   <div class="form-group">
-        <div class="control-label col-sm-7">
-          <%= f.radio_button :attending, true , :checked => true , :value => true %> 
-          <%= f.label :attending, "Yes, I'll be attending"%>
-        </div>
+    <div class="radio col-sm-offset-4">
+      <%= f.radio_button :attending, true , :checked => true , :value => true %> 
+      <%= f.label :attending, "Yes, I'll be attending"%>
+    </div>
   </div>
   <div class="form-group">
-    <div class="control-label col-sm-7">
+    <div class="radio col-sm-offset-4">
       <%= f.radio_button :attending, false, :value => false%>
       <%= f.label :attending, "No, sending my regrets"%>
     </div>
