@@ -40,6 +40,9 @@ section {
   .scenery {
     position: absolute;
   }
+  .fireflies {
+    position: absolute;
+  }
   .firefly {
     width: 3px;
     height: 3px;
@@ -47,6 +50,10 @@ section {
     border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
+    position: relative;
+  }
+  .blink {
+    opacity: 0;
   }
   .foreground {
     .bush {
@@ -54,6 +61,12 @@ section {
       left: 1050px;
       z-index: 40;
       height: 130px;
+    }
+    .fireflies {
+      height: 100px;
+      width: 100%;
+      top: 700px;
+      z-index: 50;
     }
   }
   .midground {
@@ -90,18 +103,23 @@ section {
       transform: scaleX(-1);
       filter: FlipH;
       -ms-filter: "FlipH";
-      filter: blur(2px);
-      // Browser Specific
-      -webkit-filter: blur(2px);
-      -moz-filter: blur(2px);
-      -o-filter: blur(2px);
-      -ms-filter: blur(2px);
-      filter: brightness(0.5);
       // Browser Specific
       -webkit-filter: brightness(0.5);
       -moz-filter: brightness(0.5);
       -o-filter: brightness(0.5);
       -ms-filter: brightness(0.5);
+    }
+    .fireflies {
+      top: 450px;
+      height: 200px;
+      width: 100%;
+      // Browser Specific
+      filter: blur(1px);
+      -webkit-filter: blur(1px);
+      -moz-filter: blur(1px);
+      -o-filter: blur(1px);
+      -ms-filter: blur(1px);
+      z-index: 50;
     }
   }
   .background {
@@ -110,19 +128,29 @@ section {
       left: 1130px;
       z-index: 10;
       height: 70px;
+      filter: blur(3px);
+      // Browser Specific
+      -webkit-filter: blur(3px);
+      -moz-filter: blur(3px);
+      -o-filter: blur(3px);
+      -ms-filter: blur(3px);
+      filter: brightness(0.5);
+      // Browser Specific
+      -webkit-filter: brightness(0.5);
+      -moz-filter: brightness(0.5);
+      -o-filter: brightness(0.5);
+      -ms-filter: brightness(0.5);
     }
-    filter: blur(3px);
-    // Browser Specific
-    -webkit-filter: blur(3px);
-    -moz-filter: blur(3px);
-    -o-filter: blur(3px);
-    -ms-filter: blur(3px);
-    filter: brightness(0.5);
-    // Browser Specific
-    -webkit-filter: brightness(0.5);
-    -moz-filter: brightness(0.5);
-    -o-filter: brightness(0.5);
-    -ms-filter: brightness(0.5);
+    .fireflies {
+      top: 400px;
+      height: 100px;
+      width: 100%;
+      -webkit-filter: blur(1.5px);
+      -moz-filter: blur(1.5px);
+      -o-filter: blur(1.5px);
+      -ms-filter: blur(1.5px);
+      filter: brightness(0.5);
+    }
   }
   .container {
     z-index: 100;
