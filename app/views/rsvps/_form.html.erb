@@ -42,15 +42,19 @@
     </div>
   </div>
   <div class="form-group">
-        <div class="control-label col-sm-7">
-          <%= f.radio_button :attending, true , :checked => true , :value => true %> 
-          <%= f.label :attending, "Yes, I'll be attending"%>
-        </div>
-  </div>
-  <div class="form-group">
-    <div class="control-label col-sm-7">
-      <%= f.radio_button :attending, false, :value => false%>
-      <%= f.label :attending, "No, sending my regrets"%>
+    <div class="col-sm-8 col-sm-offset-4">
+      <div class="radio">
+        <%= f.label :attending, value: true do %>
+          <%= f.radio_button :attending, true , value: true %> 
+          Yes, I'll be attending
+        <% end %>
+      </div>
+      <div class="radio">
+        <%= f.label :attending, value: false do %>
+          <%= f.radio_button :attending, false, value: false %>
+          No, sending my regrets
+        <% end %>
+      </div>
     </div>
   </div>
   <div class="form-group">
