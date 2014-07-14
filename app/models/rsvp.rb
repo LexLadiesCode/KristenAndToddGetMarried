@@ -22,9 +22,9 @@ class Rsvp < ActiveRecord::Base
     "#{first_name} #{last_name}".strip
   end
 
-  #def send_emails
-    #User.all.each do |user|
-      #RsvpMailer.repondez(self, user.email).deliver
+  def send_emails
+    User.all.each do |user|
+      RsvpMailer.repondez(self, user.email).deliver
     end
   end
 
