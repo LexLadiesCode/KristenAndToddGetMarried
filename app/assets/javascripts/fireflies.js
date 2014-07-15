@@ -50,6 +50,12 @@ function FireflyGroup() {
     return false; // if this happens there's been an error
   };
 
+  that.StartShow = function() {
+    console.log("Go!");
+    var firstFly = that.flies[0];
+    firstFly.On();
+  };
+
   return that;
 }
 
@@ -58,14 +64,14 @@ var fireflies = FireflyGroup();
 fireflyElements = $('.firefly'); // jQuery getting all the div with .firefly class
 
 fireflyElements.each( function (index, value) {
-
     var id = "firefly"+index;
     $(value).attr("id", id);
     var newFirefly = new Firefly(id, value);
+    newFirefly.Off();
     fireflies.AddFirefly(newFirefly);
 });
 
-//fireflies.StartShow();
+fireflies.StartShow();
 
 function sleep(milliseconds) {
   var start = new Date().getTime();
