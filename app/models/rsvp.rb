@@ -1,5 +1,7 @@
 class Rsvp < ActiveRecord::Base
-  after_create :send_emails
+  # Disable sending email every time an RSVP is created since it currently wigs
+  # out on Heroku.
+  # after_create :send_emails
 
   scope :attending, ->{ where(attending: true) }
 
