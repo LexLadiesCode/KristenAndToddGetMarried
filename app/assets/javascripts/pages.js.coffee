@@ -19,17 +19,3 @@ $ ->
     speed: 300
     slidesToShow: 1
     slidesToScroll: 1
-
-  addBlink = ->
-    $(".foreground .firefly").addClass("blink")
-
-  removeBlink = ->
-    $(".foreground .firefly").removeClass("blink")
-
-  setInterval ->
-     addBlink()
-    , 4000
-
-  setInterval ->
-     removeBlink()
-    , 3553
