@@ -30,10 +30,21 @@ class Gift < ActiveRecord::Base
     BigDecimal.new(cost_cents.to_s) / 100
   end
 
+  # Returns the amount remaining to fully fund this gift, in dollars.
+  def amount_remaining
+    return unless cost_cents && amount_received_cents
+    remaining_cents = cost_cents - amount_received_cents
+    BigDecimal.new(remaining_cents.to_s) / 100
+  end
+
   # Returns the amount of money already received to fund this gift, in dollars.
   def amount_received
     return unless amount_received_cents
     BigDecimal.new(amount_received_cents.to_s) / 100
+  end
+
+  def unfunded?
+    amount_received_cents.nil? || amount_received_cents.zero?
   end
 
   # Returns a value between 0-100 representing how fully this gift is funded.

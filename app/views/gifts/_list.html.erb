@@ -7,10 +7,10 @@
             <div class="gift-details">
               <% if gift.image_url.present? %>
                 <p>
-                  <%= image_tag gift.image_url, alt: '', class: 'gift-image' %>
+                  <%= link_to image_tag(gift.image_url, alt: '', class: 'gift-image'), gift.url %>
                 </p>
               <% end %>
-              <%= link_to_if gift.url.present?, gift.name, gift.url %>
+              <%= link_to gift.name, gift.url, title: "#{number_to_currency gift.amount_remaining} remaining", data: {toggle: "tooltip", placement: 'bottom'} %>
               <% if gift.description.present? %>
                 <p class="gift-description">
                   <%= gift.description %>
@@ -24,16 +24,20 @@
             </div>
           </div>
           <div class="col-md-5 text-center">
-            <div id="gift-thermometer-<%= gift.id %>" class="gift-thermometer thermometer horizontal">
+            <% unless gift.unfunded? %>
+              <p class="gift-percent-funded">
+                <%= number_to_percentage gift.percent_funded, precision: 0 %>
+                funded
+              </p>
+            <% end %>
+            <div id="gift-thermometer-<%= gift.id %>" class="gift-thermometer thermometer horizontal <%= 'unfunded' if gift.unfunded? %>">
               <div class="track">
                 <div class="progress" data-percent="<%= gift.percent_funded %>">
                   <div class="amount"></div>
                 </div>
               </div>
             </div>
-            <% if gift.url.present? %>
-              <%= link_to 'Contribute to this gift!', gift.url, class: 'contribute-link' %>
-            <% end %>
+            <%= link_to 'Contribute to this gift!', gift.url, class: 'contribute-link', title: "#{number_to_currency gift.amount_remaining} remaining", data: {toggle: "tooltip", placement: 'bottom'} %>
           </div>
         </div>
       </li>
