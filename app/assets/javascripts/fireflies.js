@@ -27,28 +27,28 @@ function FireflyGroup() {
   that.direction = 'LTR';
 
   that.AddFirefly = function(fly) {
-    flies.push(fly);
+    that.flies.push(fly);
     return true;
   }
 
   that.GetNeighbor = function(currentFly) {
-  if (currentFly.id === that.flies.length) {
-    that.direction = 'RTL';
-    return that.flies[that.flies.length - 1]; //go ahead and return the neighbor
-  } else if (currentFly.id === 0) {
-    that.direction = 'LTR';
-    return that.flies[1]; // go ahead and return the neighbor
-  };
-  if (that.direction === 'LTR') {
-    // get the fly to the right
-    return that.flies[currentFly.id + 1];
-  } else {
-    // get the fly to the left
-    return that.flies[currentFly.id - 1];
-  };
+    if (currentFly.id === that.flies.length) {
+      that.direction = 'RTL';
+      return that.flies[that.flies.length - 1]; //go ahead and return the neighbor
+    } else if (currentFly.id === 0) {
+      that.direction = 'LTR';
+      return that.flies[1]; // go ahead and return the neighbor
+    };
+    if (that.direction === 'LTR') {
+      // get the fly to the right
+      return that.flies[currentFly.id + 1];
+    } else {
+      // get the fly to the left
+      return that.flies[currentFly.id - 1];
+    };
 
-  return false; // if this happens there's been an error
-};
+    return false; // if this happens there's been an error
+  };
 
   return that;
 }
