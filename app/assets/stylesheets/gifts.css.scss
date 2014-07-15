@@ -6,7 +6,7 @@
 
 .gift-image, .wanderable-link {
   background: #ffffff;
-  border: 1px solid #999999;
+  border: 1px solid $thermometer_border_color;
   display: block;
 }
 
@@ -24,11 +24,18 @@
     }
   }
 
+  .gift-percent-funded {
+    margin-top: ($line-height-computed * 2);
+  }
+
   .gift-thermometer {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 80px;
     margin-bottom: 20px;
+
+    &.unfunded {
+      margin-top: ($line-height-computed * 3);
+    }
   }
 
   .gift-image {
@@ -42,7 +49,7 @@
   li {
     & + li {
       margin-top: 40px;
-      border-top: 1px solid darken($sunset-sky-color, 20%);
+      border-top: 1px solid $thermometer_border_color;
       padding-top: 40px;
     }
   }
@@ -50,7 +57,7 @@
 
 .thermometer {
   position: relative;
-  border: 1px solid #aaa;
+  border: 1px solid $thermometer_border_color;
   width: 350px;
   height: 20px;
   border-radius: $thermometer_roundness;
@@ -58,6 +65,7 @@
   .progress {
     position: absolute;
     bottom: 0;
+    margin-bottom: 0;
     left: -1px;
     height: 100%;
     border-radius: $thermometer_roundness;
@@ -65,7 +73,7 @@
     background: $mercury_color;
 
     .amount {
-      display: inline-block;
+      display: none;
       font-weight: bold;
       bottom: 0;
       position: relative;
@@ -75,15 +83,16 @@
 
   .track {
     top: -1px;
-    border: 1px solid #aaa;
+    border: 1px solid $thermometer_border_color;
     position: relative;
+    overflow: hidden;
     background-position: 0 -1px;
     width: 100%;
     left: 0;
     height: 20px;
     margin: 0 auto;
     background: white;
-    background: linear-gradient(to right, #aaa 0%, rgb(255,255,255) 10%);
+    background: linear-gradient(to right, $thermometer_border_color 0%, rgb(255,255,255) 10%);
     background-size: 5% 100%;
     border-radius: $thermometer_roundness;
   }

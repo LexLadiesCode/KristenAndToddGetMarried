@@ -5,8 +5,9 @@ $day-grass-color: rgb(118, 160, 68);
 $sunset-sky-color: rgb(227, 214, 87);
 $page-text-font: 'Shadows into Light Two', sans-serif;
 $page-header-font: 'Acme', sans-serif;
-$mercury_color: rgb(20, 100, 20);
+$mercury_color: $day-grass-color;
 $thermometer_roundness: 12px;
+$thermometer_border_color: darken($sunset-sky-color, 20%);
 
 // a flag to toggle asset pipeline / compass integration
 // defaults to true if twbs-font-path function is present (no function => twbs-font-path('') parsed as string == right side)
