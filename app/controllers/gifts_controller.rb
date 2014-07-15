@@ -4,8 +4,10 @@ class GiftsController < ApplicationController
     wanderable = Wanderable.new(ENV['WANDERABLE_URL'])
     wanderable.scrape_gifts
     @gifts = Gift.order(:name)
-
-    # Don't render full page layout if this is an AJAX request
-    render layout: !request.xhr?
+    respond_to do |format|
+      # Don't render full page layout if this is an AJAX request
+      format.html { render layout: !request.xhr? }
+      format.json
+    end
   end
 end

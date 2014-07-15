@@ -1,6 +1,28 @@
 class Gift < ActiveRecord::Base
   validates :name, presence: true
   validates :cost_cents, presence: true
+  validates :url, presence: true, uniqueness: true
+
+  URL_PREFIX = 'https://wanderable.com'.freeze
+
+  TOTAL_COST_CENTS = {
+    '/cart/86296/add?item_id=86296' => 3000_00,
+    '/cart/86305/add?item_id=86305' => 2500_00,
+    '/cart/86291/add?item_id=86291' => 180_00,
+    '/cart/86279/add?item_id=86279' => 250_00,
+    '/cart/86292/add?item_id=86292' => 240_00,
+    '/cart/86301/add?item_id=86301' => 400_00,
+    '/cart/86293/add?item_id=86293' => 205_00,
+    '/cart/86295/add?item_id=86295' => 780_00
+  }.freeze
+
+  def self.total_cost_for_url url
+    TOTAL_COST_CENTS.each do |url_stub, cost_in_cents|
+      if url.include?(url_stub)
+        return cost_in_cents
+      end
+    end
+  end
 
   # Returns the cost to fund this gift, in dollars.
   def cost

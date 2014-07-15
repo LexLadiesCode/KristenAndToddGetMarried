@@ -35,19 +35,24 @@ class Wanderable
       description = details.join("\n").presence
     end
     cost_str = gift_html.at('.col-sm-4 p').text
-    url = gift_html.at('.col-sm-4 a.add_to_cart')['href']
-    url = 'https://wanderable.com' + url unless url.start_with?('http')
-    gift = Gift.where(name: name).first_or_initialize
+    relative_url = gift_html.at('.col-sm-4 a.add_to_cart')['href']
+    unless relative_url.start_with?('http')
+      url = Gift::URL_PREFIX + relative_url
+    end
+    gift = Gift.where(url: url).first_or_initialize
+    gift.name = name
     gift.description = description
     gift.location = location
     gift.image_url = image_url
     gift.url = url
     if cost_str.present?
       dollars = BigDecimal.new(Monetize.parse(cost_str).to_s)
-      gift.cost_cents = (dollars * 100).to_i
+      cents_remaining = (dollars * 100).to_i
+      if total_cents=Gift.total_cost_for_url(relative_url)
+        gift.cost_cents = total_cents
+        gift.amount_received_cents = total_cents - cents_remaining
+      end
     end
-    # TODO: set amount_received_cents on gift
-    # gift.amount_received_cents = ???
     gift.save
   end
 end
