@@ -32,7 +32,7 @@ function FireflyGroup() {
   }
 
   that.GetNeighbor = function(currentFlyId) {
-    console.log(that.direction);
+    console.log(currentFlyId);
     if (currentFlyId === that.flies.length - 1) {
       that.direction = 'RTL';
       return that.flies[that.flies.length - 2]; //go ahead and return the neighbor
@@ -45,7 +45,6 @@ function FireflyGroup() {
       return that.flies[currentFlyId + 1];
     } else {
       // get the fly to the left
-      console.log("go left");
       return that.flies[currentFlyId - 1];
     };
 
@@ -53,25 +52,26 @@ function FireflyGroup() {
   };
 
   that.LightItUp = function(currentFly, timeOut) {
-    currentFly.On();
+    if (currentFly.isOut === true) {
+      currentFly.On();
+    }
     setTimeout( function() {
-      that.LightItUp(that.GetNeighbor(currentFly.id), timeOut + 2000);
-      that.ShutHerDown(currentFly, timeOut);
-    }, 2000);
+      that.LightItUp(that.GetNeighbor(currentFly.id), timeOut);
+      that.ShutHerDown(currentFly, timeOut + 1000);
+    }, timeOut);
   };
 
   that.ShutHerDown = function(currentFly, timeOut) {
     setTimeout( function() {
       currentFly.Off();
-    }, timeOut + 2000);
+    }, timeOut);
   };
 
   that.StartShow = function() {
     var firstFly = that.flies[0];
-    firstFly.On();
     setTimeout( function() {
-      that.LightItUp(firstFly, 2000);
-    }, 2000);
+      that.LightItUp(firstFly, 1000);
+    }, 3000);
   };
 
   return that;
