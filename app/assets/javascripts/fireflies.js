@@ -24,36 +24,54 @@ function Firefly(id, divElement){
 function FireflyGroup() {
   var that = {};
   that.flies = [];
-  that.direction = 'LTR';
+  that.direction = '';
 
   that.AddFirefly = function(fly) {
     that.flies.push(fly);
     return true;
   }
 
-  that.GetNeighbor = function(currentFly) {
-    if (currentFly.id === that.flies.length) {
+  that.GetNeighbor = function(currentFlyId) {
+    console.log(that.direction);
+    if (currentFlyId === that.flies.length - 1) {
       that.direction = 'RTL';
-      return that.flies[that.flies.length - 1]; //go ahead and return the neighbor
-    } else if (currentFly.id === 0) {
+      return that.flies[that.flies.length - 2]; //go ahead and return the neighbor
+    } else if (currentFlyId === 0) {
       that.direction = 'LTR';
       return that.flies[1]; // go ahead and return the neighbor
     };
     if (that.direction === 'LTR') {
       // get the fly to the right
-      return that.flies[currentFly.id + 1];
+      return that.flies[currentFlyId + 1];
     } else {
       // get the fly to the left
-      return that.flies[currentFly.id - 1];
+      console.log("go left");
+      return that.flies[currentFlyId - 1];
     };
 
     return false; // if this happens there's been an error
   };
 
+  that.LightItUp = function(currentFly, timeOut) {
+    currentFly.On();
+    setTimeout( function() {
+      that.LightItUp(that.GetNeighbor(currentFly.id), timeOut + 2000);
+      that.ShutHerDown(currentFly, timeOut);
+    }, 2000);
+  };
+
+  that.ShutHerDown = function(currentFly, timeOut) {
+    setTimeout( function() {
+      currentFly.Off();
+    }, timeOut + 2000);
+  };
+
   that.StartShow = function() {
-    console.log("Go!");
     var firstFly = that.flies[0];
     firstFly.On();
+    setTimeout( function() {
+      that.LightItUp(firstFly, 2000);
+    }, 2000);
   };
 
   return that;
@@ -64,34 +82,11 @@ var fireflies = FireflyGroup();
 fireflyElements = $('.firefly'); // jQuery getting all the div with .firefly class
 
 fireflyElements.each( function (index, value) {
-    var id = "firefly"+index;
-    $(value).attr("id", id);
-    var newFirefly = new Firefly(id, value);
-    newFirefly.Off();
-    fireflies.AddFirefly(newFirefly);
+  var id = "firefly"+index;
+  $(value).attr("id", id);
+  var newFirefly = new Firefly(index, value);
+  newFirefly.Off();
+  fireflies.AddFirefly(newFirefly);
 });
 
 fireflies.StartShow();
-
-function sleep(milliseconds) {
-  var start = new Date().getTime();
-  for (var i = 0; i < 1e7; i++) {
-    if ((new Date().getTime() - start) > milliseconds){
-      break;
-    }
-  }
-}
-function addBlink(fly, index) {
-  $(fly).addClass('blink');
-  console.log("blink");
-  if (index <= fireflies.length){
-    sleep(1000);
-    addBlink(fireflies[index++],index++);
-    console.log("add next");
-  }
-}
-
-
-function removeBlink(fly){
-  fly.removeClass('blink');
-}
